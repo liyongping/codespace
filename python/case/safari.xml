@@ -1,0 +1,172 @@
+<tt xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
+  <head>
+    <styling>
+      <style xml:id="basic" tts:textAlign="center"/>
+    </styling>
+    <ttm:metadata>
+      <ttm:title>9780134175249-EPLL_01_01.dfxp</ttm:title>
+    </ttm:metadata>
+  </head>
+  <body style="basic">
+    <div>
+      <p begin="00:00:06.066" end="00:00:07.586">- [Voiceover] Python<br/>includes syntax for slicing</p>
+      <p begin="00:00:07.586" end="00:00:09.546">sequences into pieces.</p>
+      <p begin="00:00:09.546" end="00:00:11.406">The basic form of the slicing syntax</p>
+      <p begin="00:00:11.406" end="00:00:13.646">is somelist[start:end],</p>
+      <p begin="00:00:13.646" end="00:00:15.566">where start is the inclusive index</p>
+      <p begin="00:00:15.566" end="00:00:17.825">and end is the exclusive index.</p>
+      <p begin="00:00:17.825" end="00:00:19.345">Slicing lets you access a subset</p>
+      <p begin="00:00:19.345" end="00:00:21.226">of a sequence's items with minimal effort.</p>
+      <p begin="00:00:21.226" end="00:00:22.646">The simplest uses for slicing</p>
+      <p begin="00:00:22.646" end="00:00:24.506">are the built-in types list, tuple,</p>
+      <p begin="00:00:24.506" end="00:00:27.426">string, and bytes, but<br/>slicing can be extended</p>
+      <p begin="00:00:27.426" end="00:00:28.741">to any class that implements</p>
+      <p begin="00:00:28.741" end="00:00:30.515">the getitem special method.</p>
+      <p begin="00:00:30.515" end="00:00:31.956">For example, here's some simple slices</p>
+      <p begin="00:00:31.956" end="00:00:32.936">of a list.</p>
+      <p begin="00:00:32.936" end="00:00:35.635">So here's a list with a<br/>bunch of letters in it.</p>
+      <p begin="00:00:35.635" end="00:00:38.910">I can print a slice of<br/>the first four items.</p>
+      <p begin="00:00:38.910" end="00:00:41.990">I can also print a slice<br/>of the last four items</p>
+      <p begin="00:00:41.990" end="00:00:43.911">by starting at the negative index</p>
+      <p begin="00:00:43.911" end="00:00:45.311">and going after that.</p>
+      <p begin="00:00:45.311" end="00:00:47.486">And then I can also print<br/>some of the interior items</p>
+      <p begin="00:00:47.486" end="00:00:48.746">by starting at the third index</p>
+      <p begin="00:00:48.746" end="00:00:51.726">and going toward to the<br/>negative third index.</p>
+      <p begin="00:00:51.726" end="00:00:52.626">So you can see that that starts</p>
+      <p begin="00:00:52.626" end="00:00:53.686">at d and ends at e.</p>
+      <p begin="00:00:53.686" end="00:00:55.927">So the third index in,</p>
+      <p begin="00:00:55.927" end="00:00:57.567">which actually the fourth position,</p>
+      <p begin="00:00:57.567" end="00:01:00.767">and then the negative third index back,</p>
+      <p begin="00:01:00.767" end="00:01:02.242">which is f in this case,</p>
+      <p begin="00:01:02.242" end="00:01:05.483">is the end exclusive index<br/>not included in the slice.</p>
+      <p begin="00:01:05.483" end="00:01:07.023">When you're slicing to the end of a list,</p>
+      <p begin="00:01:07.023" end="00:01:08.583">you should leave out the final index</p>
+      <p begin="00:01:08.583" end="00:01:10.243">because it's redundant.</p>
+      <p begin="00:01:10.243" end="00:01:12.782">So you can create a slice this way</p>
+      <p begin="00:01:12.782" end="00:01:15.282">where you say five and after.</p>
+      <p begin="00:01:15.282" end="00:01:17.642">That'll give you one set of things.</p>
+      <p begin="00:01:17.642" end="00:01:19.743">An equivalent slice would be to say</p>
+      <p begin="00:01:19.743" end="00:01:23.282">start at five and then end<br/>at the length of the slice.</p>
+      <p begin="00:01:23.282" end="00:01:25.782">Those are the same<br/>slice because the length</p>
+      <p begin="00:01:25.782" end="00:01:27.793">is always going to be one index longer.</p>
+      <p begin="00:01:27.793" end="00:01:29.413">The end index is exclusive,</p>
+      <p begin="00:01:29.413" end="00:01:31.233">so they're equivalent.</p>
+      <p begin="00:01:31.233" end="00:01:33.093">You can actually test that by saying,</p>
+      <p begin="00:01:33.093" end="00:01:37.433">okay, is a five index equal to a</p>
+      <p begin="00:01:37.433" end="00:01:39.453">at five index and the length of a?</p>
+      <p begin="00:01:39.453" end="00:01:41.293">There's no assertion failure there.</p>
+      <p begin="00:01:41.293" end="00:01:42.974">Using negative numbers for slicing</p>
+      <p begin="00:01:42.974" end="00:01:44.554">is really helpful for doing offsets</p>
+      <p begin="00:01:44.554" end="00:01:47.024">relative to the end of a list.</p>
+      <p begin="00:01:47.024" end="00:01:48.850">You know, there's a<br/>lot of forms of slicing</p>
+      <p begin="00:01:48.850" end="00:01:50.650">that are all clear to a<br/>new reader of your code</p>
+      <p begin="00:01:50.650" end="00:01:52.250">that I encourage you to use.</p>
+      <p begin="00:01:52.250" end="00:01:53.490">So here's some of those variations</p>
+      <p begin="00:01:53.490" end="00:01:56.290">that are good ways to use slicing.</p>
+      <p begin="00:01:56.290" end="00:01:57.750">The first one is just the empty slice.</p>
+      <p begin="00:01:57.750" end="00:02:00.690">This is give me everything<br/>as it returns a copy.</p>
+      <p begin="00:02:00.690" end="00:02:01.650">There is give me everything</p>
+      <p begin="00:02:01.650" end="00:02:03.070">up to the fifth item.</p>
+      <p begin="00:02:03.070" end="00:02:05.430">There's give me everything up to,</p>
+      <p begin="00:02:05.430" end="00:02:06.809">but not including, the last item,</p>
+      <p begin="00:02:06.809" end="00:02:08.189">the negative first index.</p>
+      <p begin="00:02:08.189" end="00:02:10.869">There's give me everything<br/>after the fourth index.</p>
+      <p begin="00:02:10.869" end="00:02:13.710">There's give me everything<br/>after three back</p>
+      <p begin="00:02:13.710" end="00:02:15.490">from the end, so the third to last,</p>
+      <p begin="00:02:15.490" end="00:02:17.070">give me everything after that point,</p>
+      <p begin="00:02:17.070" end="00:02:18.065">f, g, h.</p>
+      <p begin="00:02:18.065" end="00:02:20.065">There's give me everything<br/>from the second index</p>
+      <p begin="00:02:20.065" end="00:02:21.665">all the way up to the fifth index.</p>
+      <p begin="00:02:21.665" end="00:02:22.725">Now again, there's some more tricky ones.</p>
+      <p begin="00:02:22.725" end="00:02:25.006">There's give me the<br/>second index all the way</p>
+      <p begin="00:02:25.006" end="00:02:27.126">to everything but the last index.</p>
+      <p begin="00:02:27.126" end="00:02:28.666">And finally, the trickiest of all these</p>
+      <p begin="00:02:28.666" end="00:02:30.905">is give me the third to last all the way</p>
+      <p begin="00:02:30.905" end="00:02:32.406">to the first to last.</p>
+      <p begin="00:02:32.406" end="00:02:33.926">But all these are pretty clear.</p>
+      <p begin="00:02:33.926" end="00:02:37.286">Slicing deals properly<br/>with start and end indexes</p>
+      <p begin="00:02:37.286" end="00:02:39.885">that are beyond the<br/>boundaries of the list.</p>
+      <p begin="00:02:39.885" end="00:02:40.885">That makes it easy for your code</p>
+      <p begin="00:02:40.885" end="00:02:42.325">to establish a maximum length</p>
+      <p begin="00:02:42.325" end="00:02:44.286">to consider for an input sequence.</p>
+      <p begin="00:02:44.286" end="00:02:47.206">So for example, you can<br/>say give me the first 20</p>
+      <p begin="00:02:47.206" end="00:02:48.726">from the list of a.</p>
+      <p begin="00:02:48.726" end="00:02:50.325">And even if a isn't 20 in length,</p>
+      <p begin="00:02:50.325" end="00:02:51.225">this will work.</p>
+      <p begin="00:02:51.225" end="00:02:52.925">Similarly, you can say give me</p>
+      <p begin="00:02:52.925" end="00:02:54.361">the last 20 of a.</p>
+      <p begin="00:02:54.361" end="00:02:57.560">In this case, like this,<br/>it'll be everything</p>
+      <p begin="00:02:57.560" end="00:02:58.780">because the list is less than 20.</p>
+      <p begin="00:02:58.780" end="00:02:59.820">Now what's interesting is that if you did</p>
+      <p begin="00:02:59.820" end="00:03:01.241">the same thing with just an offset,</p>
+      <p begin="00:03:01.241" end="00:03:05.061">if you tried to access<br/>the 20th index of a,</p>
+      <p begin="00:03:05.061" end="00:03:07.231">you get an exception because that's</p>
+      <p begin="00:03:07.231" end="00:03:09.077">not actually in the list.</p>
+      <p begin="00:03:09.077" end="00:03:10.997">So slices are forgiving with the range,</p>
+      <p begin="00:03:10.997" end="00:03:12.857">which makes it very easy to create</p>
+      <p begin="00:03:12.857" end="00:03:14.777">these maximum length slices</p>
+      <p begin="00:03:14.777" end="00:03:17.356">or minimum length slices.</p>
+      <p begin="00:03:17.356" end="00:03:21.617">The result of slicing a<br/>list is a whole new list.</p>
+      <p begin="00:03:21.617" end="00:03:25.097">So if I create b here as a list from a,</p>
+      <p begin="00:03:25.097" end="00:03:27.543">and then I modify b,</p>
+      <p begin="00:03:28.517" end="00:03:30.179">b will have changed.</p>
+      <p begin="00:03:30.493" end="00:03:33.009">But the original list that b's a slice of</p>
+      <p begin="00:03:33.009" end="00:03:35.359">will have not changed.</p>
+      <p begin="00:03:35.365" end="00:03:38.444">You can use slices in tuple assignments</p>
+      <p begin="00:03:38.444" end="00:03:40.744">as long as the length<br/>of the slice assignments</p>
+      <p begin="00:03:40.744" end="00:03:43.024">are the same as the<br/>tuple you're assigning.</p>
+      <p begin="00:03:43.024" end="00:03:46.765">So if you say give me the first two of a,</p>
+      <p begin="00:03:46.765" end="00:03:48.425">that'll assign to b and c,</p>
+      <p begin="00:03:48.425" end="00:03:50.465">and you can see them there.</p>
+      <p begin="00:03:50.465" end="00:03:51.765">Happen to be the same letters.</p>
+      <p begin="00:03:51.765" end="00:03:54.245">If you try to assign to a larger slice,</p>
+      <p begin="00:03:54.245" end="00:03:56.084">this actually fails because<br/>the tuple assignment</p>
+      <p begin="00:03:56.084" end="00:03:58.485">doesn't have enough values to unpack.</p>
+      <p begin="00:03:58.485" end="00:04:00.664">What's interesting is<br/>that in slice assignments</p>
+      <p begin="00:04:00.664" end="00:04:03.344">that the slice being<br/>assigned to will be replaced</p>
+      <p begin="00:04:03.344" end="00:04:04.924">in the original list, and they don't have</p>
+      <p begin="00:04:04.924" end="00:04:05.884">to be the same size.</p>
+      <p begin="00:04:05.884" end="00:04:08.184">So here I'm selecting four items</p>
+      <p begin="00:04:08.184" end="00:04:10.805">and I'm putting in three instead.</p>
+      <p begin="00:04:10.805" end="00:04:13.865">And you can see that it<br/>actually truncates the list</p>
+      <p begin="00:04:13.865" end="00:04:15.545">to fit the new slices.</p>
+      <p begin="00:04:15.545" end="00:04:18.285">So slice assignment, which is<br/>actually a splice operation</p>
+      <p begin="00:04:18.285" end="00:04:21.640">where the new content is put in place</p>
+      <p begin="00:04:21.640" end="00:04:24.740">of the content that was there previously.</p>
+      <p begin="00:04:24.740" end="00:04:25.960">One thing that can be<br/>surprising to newbies</p>
+      <p begin="00:04:25.960" end="00:04:28.361">is that if you leave out the indexes,</p>
+      <p begin="00:04:28.361" end="00:04:30.521">you actually create a copy of the list.</p>
+      <p begin="00:04:30.521" end="00:04:31.861">And so even though they look</p>
+      <p begin="00:04:31.861" end="00:04:33.221">like they're the same list</p>
+      <p begin="00:04:33.221" end="00:04:34.481">when you print them out,</p>
+      <p begin="00:04:34.481" end="00:04:37.327">if you look at the IDs of these objects,</p>
+      <p begin="00:04:37.327" end="00:04:39.642">which is kind of their address in memory,</p>
+      <p begin="00:04:39.642" end="00:04:41.383">you'll see that they're<br/>actually different.</p>
+      <p begin="00:04:41.383" end="00:04:43.403">So this one's, they<br/>have the same beginning,</p>
+      <p begin="00:04:43.403" end="00:04:45.783">but they actually have<br/>different addresses in memory.</p>
+      <p begin="00:04:45.783" end="00:04:48.742">So you can say, well a and b are the same</p>
+      <p begin="00:04:48.742" end="00:04:51.302">in terms of their equivalent lists,</p>
+      <p begin="00:04:51.302" end="00:04:53.902">but you can also say that a is not b,</p>
+      <p begin="00:04:53.902" end="00:04:55.462">they are separate lists.</p>
+      <p begin="00:04:55.462" end="00:04:57.022">That means that if you modify b</p>
+      <p begin="00:04:57.022" end="00:05:01.963">after this slice, that<br/>b will have changed,</p>
+      <p begin="00:05:01.963" end="00:05:04.682">but a will have stayed the same.</p>
+      <p begin="00:05:04.682" end="00:05:07.203">There's one final gotcha<br/>to be aware of with slices.</p>
+      <p begin="00:05:07.203" end="00:05:10.403">So say that you're indexing into a slice</p>
+      <p begin="00:05:10.403" end="00:05:11.403">with a negative index.</p>
+      <p begin="00:05:11.403" end="00:05:13.543">You have a variable here,</p>
+      <p begin="00:05:13.543" end="00:05:14.443">the number three,</p>
+      <p begin="00:05:14.443" end="00:05:16.853">and you will offset into that slice</p>
+      <p begin="00:05:16.853" end="00:05:18.539">to create a slice.</p>
+      <p begin="00:05:18.539" end="00:05:20.079">This works great with numbers,</p>
+      <p begin="00:05:20.079" end="00:05:22.779">but as soon as n becomes zero,</p>
+      <p begin="00:05:22.779" end="00:05:24.539">this actually becomes negative zero,</p>
+      <p begin="00:05:24.539" end="00:05:25.959">which causes you to just copy</p>
+      <p begin="00:05:25.959" end="00:05:27.879">the whole original slice.</p>
+      <p begin="00:05:27.879" end="00:05:29.859">So it can be very surprising</p>
+      <p begin="00:05:29.859" end="00:05:30.975">when you're using a negative variable</p>
+      <p begin="00:05:30.975" end="00:05:31.915">as a slice index.</p>
+      <p begin="00:05:31.915" end="00:05:36.915">Something to caution and guard against.</p>
+    </div>
+  </body>
+</tt>
