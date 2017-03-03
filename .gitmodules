@@ -1,0 +1,3 @@
+[submodule "projects/wcf_json_xml"]
+	path = projects/wcf_json_xml
+	url = https://github.com/liyongping/wcf_json_xml.git
