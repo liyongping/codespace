@@ -1,0 +1,51 @@
+headers = {
+                   #"Content-Length": contentlength,
+                   "User-Agent" : "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:17.0) Gecko/20100101 Firefox/17.0",
+                   "Accept" : "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                   "Accept-Language": "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3",
+                   "Accept-Encoding": "gzip, deflate",
+                   #"Accept-Charset": "UTF-8,*",
+                   #"DNT": "1",
+                   "Connection":'keep-alive',
+                   "Referer": "http://opac.sdll.cn:8080/opac/websearch/WebReader?cmdACT=ReaderInput_new&columnID=3",
+                   "Cookie": phpsessionid,
+                   "Content-Type": "application/x-www-form-urlencoded",
+                   "Host" :  "opac.sdll.cn:8080"
+                   };
+				   
+				   
+Host: littlepoll.people.com.cn
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://pic.people.com.cn/GB/54965/402337/index2.html
+Cookie: wdcid=155c6cb20e08ea49; vjuids=-c4efdef0.14cfffe53cb.0.6737f48c2ed66; vjlast=1430224000; sso_c=0
+Connection: keep-alive
+
+Host: littlepoll.people.com.cn
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: ALLYESID4=0639CF2C18A8C594; wdcid=49b31906d943b33a; vjuids=7fce81ec2.13e37443ef6.0.d3802ed3; vjlast=1366726820
+
+Accept: text/html, application/xhtml+xml, */*
+Accept-Language: zh-CN
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: littlepoll.people.com.cn
+DNT: 1
+Connection: Keep-Alive
+
+Accept: application/javascript, */*;q=0.8
+Referer: http://pic.people.com.cn/GB/54965/402337/index2.html
+Accept-Language: zh-CN
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: littlepoll.people.com.cn
+DNT: 1
+Connection: Keep-Alive
+Cookie: wdcid=73a1d5bb8d1e1602; ALLYESID4=0B8A53A99C2856F7; sso_c=0
