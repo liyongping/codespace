@@ -13,3 +13,9 @@
 [submodule "projects/leeblog"]
 	path = projects/leeblog
 	url = ../leeblog.git
+[submodule "asm"]
+	path = asm
+	url = ../asm.git
+[submodule "driver"]
+	path = driver
+	url = ../driver.git
