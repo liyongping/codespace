@@ -1,3 +1,15 @@
 [submodule "projects/wcf_json_xml"]
 	path = projects/wcf_json_xml
 	url = https://github.com/liyongping/wcf_json_xml.git
+[submodule "projects/AcquireSentence"]
+	path = projects/AcquireSentence
+	url = ../AcquireSentence.git
+[submodule "projects/SentenceSquare"]
+	path = projects/SentenceSquare
+	url = ../SentenceSquare.git
+[submodule "projects/fangxun"]
+	path = projects/fangxun
+	url = ../fangxun.git
+[submodule "projects/leeblog"]
+	path = projects/leeblog
+	url = ../leeblog.git
