@@ -1,0 +1,215 @@
+<tt xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
+  <head>
+    <styling>
+      <style xml:id="basic" tts:textAlign="center"/>
+    </styling>
+    <ttm:metadata>
+      <ttm:title>9780134175249-EPLL_01_07.dfxp</ttm:title>
+    </ttm:metadata>
+  </head>
+  <body style="basic">
+    <div>
+      <p begin="00:00:06.119" end="00:00:07.209">- [Voiceover] The With statement in Python</p>
+      <p begin="00:00:07.209" end="00:00:10.369">is used to indicate when code<br/>is running in a special context.</p>
+      <p begin="00:00:10.369" end="00:00:12.050">For example, mutual exclusion locks</p>
+      <p begin="00:00:12.050" end="00:00:13.670">can be used in With statements to indicate</p>
+      <p begin="00:00:13.670" end="00:00:16.871">that the indented code only<br/>runs when the lock is held.</p>
+      <p begin="00:00:16.871" end="00:00:19.550">So if I import from threading module,</p>
+      <p begin="00:00:19.550" end="00:00:22.290">the lock function, the lock class,</p>
+      <p begin="00:00:22.290" end="00:00:24.441">create a lock...</p>
+      <p begin="00:00:25.280" end="00:00:27.480">And then I can use a With<br/>statement to say with a lock,</p>
+      <p begin="00:00:27.480" end="00:00:30.480">print the fact that the lock is held.</p>
+      <p begin="00:00:31.220" end="00:00:33.651">Now this construction<br/>is also equivalent to</p>
+      <p begin="00:00:33.651" end="00:00:38.651">using Try-Finally in this way<br/>where we say lock.acquire()</p>
+      <p begin="00:00:39.600" end="00:00:43.700">print that the "lock is also held".</p>
+      <p begin="00:00:44.591" end="00:00:47.531">And then we do lock.release().</p>
+      <p begin="00:00:47.531" end="00:00:49.191">So you'll notice that the<br/>With statement of this</p>
+      <p begin="00:00:49.191" end="00:00:51.251">is much better, because<br/>it eliminates the need</p>
+      <p begin="00:00:51.251" end="00:00:53.031">to write all of this repetitive code</p>
+      <p begin="00:00:53.031" end="00:00:55.552">before the Try block and<br/>after the Finally block.</p>
+      <p begin="00:00:55.552" end="00:00:58.132">There's less to actually<br/>read, in this example up here,</p>
+      <p begin="00:00:58.132" end="00:01:00.471">which makes it just clearer<br/>and less error-prone.</p>
+      <p begin="00:01:00.471" end="00:01:01.831">It's easy to make your<br/>objects and functions</p>
+      <p begin="00:01:01.831" end="00:01:04.091">capable of use in With statements</p>
+      <p begin="00:01:04.091" end="00:01:06.291">by using the contextlib built-in module.</p>
+      <p begin="00:01:06.291" end="00:01:09.012">So let's say we had some<br/>logging that we were doing.</p>
+      <p begin="00:01:10.161" end="00:01:12.121">And the logging default level</p>
+      <p begin="00:01:15.021" end="00:01:16.581">was WARNING.</p>
+      <p begin="00:01:17.971" end="00:01:20.362">Now we have a function,</p>
+      <p begin="00:01:20.362" end="00:01:22.082">and let's say that it does<br/>something of this logging.</p>
+      <p begin="00:01:22.082" end="00:01:24.392">So it says, "Some debug info"...</p>
+      <p begin="00:01:24.392" end="00:01:29.202">here's "A real error" and<br/>some "More debugging".</p>
+      <p begin="00:01:34.143" end="00:01:37.121">Now because the log level</p>
+      <p begin="00:01:37.121" end="00:01:39.351">for the program's been set to WARNING,</p>
+      <p begin="00:01:39.351" end="00:01:40.161">when we actually run this,</p>
+      <p begin="00:01:40.161" end="00:01:42.473">we only actually see the error output.</p>
+      <p begin="00:01:42.473" end="00:01:44.062">Now it'd be nice, in certain contexts,</p>
+      <p begin="00:01:44.062" end="00:01:46.622">to be able to elevate the error level</p>
+      <p begin="00:01:46.622" end="00:01:49.822">of the system, temporarily,<br/>for certain areas</p>
+      <p begin="00:01:49.822" end="00:01:52.662">where we really want to get<br/>more detailed information.</p>
+      <p begin="00:01:52.662" end="00:01:54.163">And a really easy way<br/>to do this is using a</p>
+      <p begin="00:01:54.163" end="00:01:56.522">contextmanager from contextlib.</p>
+      <p begin="00:01:56.522" end="00:01:58.713">It's much easier than<br/>using alternatives like</p>
+      <p begin="00:01:58.713" end="00:02:01.004">the "__enter__" and<br/>"__exit__" special methods.</p>
+      <p begin="00:02:01.004" end="00:02:03.255">So to show what I mean, we can create a</p>
+      <p begin="00:02:03.255" end="00:02:06.094">helper function that boosts<br/>the logging severity level</p>
+      <p begin="00:02:06.094" end="00:02:08.365">before running a code in a With block,</p>
+      <p begin="00:02:08.365" end="00:02:09.814">and reduces it after.</p>
+      <p begin="00:02:09.814" end="00:02:13.926">So to do this, I'll import<br/>contextlib's contextmanager,</p>
+      <p begin="00:02:15.264" end="00:02:17.095">that's a decorator</p>
+      <p begin="00:02:17.095" end="00:02:18.915">that I'll apply to</p>
+      <p begin="00:02:20.445" end="00:02:23.345">this debug_logging function.</p>
+      <p begin="00:02:23.877" end="00:02:26.627">The purpose of this is to grab the logger,</p>
+      <p begin="00:02:26.627" end="00:02:29.358">from the logging system,</p>
+      <p begin="00:02:31.698" end="00:02:34.778">get the old level out of it,</p>
+      <p begin="00:02:37.748" end="00:02:42.748">then I set the logger's level<br/>to a new level temporarily,</p>
+      <p begin="00:02:44.948" end="00:02:47.529">then I do something specific<br/>to the contextmanager</p>
+      <p begin="00:02:47.529" end="00:02:49.819">and the way it works, which is</p>
+      <p begin="00:02:49.819" end="00:02:52.099">I have a Try-Finally around Yield.</p>
+      <p begin="00:02:52.099" end="00:02:53.689">I'll explain what that means in a minute.</p>
+      <p begin="00:02:53.689" end="00:02:57.294">And finally, I set the logger's level</p>
+      <p begin="00:02:57.294" end="00:02:59.513">back to the old level.</p>
+      <p begin="00:02:59.533" end="00:03:01.970">So this defines the contextmanager,<br/>and this contextmanager</p>
+      <p begin="00:03:01.970" end="00:03:05.950">can now be used with the<br/>function that I defined before</p>
+      <p begin="00:03:05.950" end="00:03:08.030">to temporarily elevate log levels.</p>
+      <p begin="00:03:08.030" end="00:03:09.191">What's important here is that</p>
+      <p begin="00:03:09.191" end="00:03:12.380">when you use debug_logging<br/>in a With statement,</p>
+      <p begin="00:03:12.380" end="00:03:15.690">the code in the With block<br/>will run on the Yield line,</p>
+      <p begin="00:03:15.690" end="00:03:17.830">so everything before the Try block</p>
+      <p begin="00:03:17.830" end="00:03:21.390">is going to do the setup<br/>before the With block runs.</p>
+      <p begin="00:03:21.390" end="00:03:24.370">After you yield, the With block will run.</p>
+      <p begin="00:03:24.370" end="00:03:27.431">And then, no matter what,<br/>after the With block exits,</p>
+      <p begin="00:03:27.431" end="00:03:29.730">even if there's an exception<br/>within the With block,</p>
+      <p begin="00:03:29.730" end="00:03:33.390">the Finally will run to<br/>restore the existing log level.</p>
+      <p begin="00:03:33.390" end="00:03:35.200">So that's why the With statement and the</p>
+      <p begin="00:03:35.200" end="00:03:36.251">Try-Finally statement are really</p>
+      <p begin="00:03:36.251" end="00:03:39.060">similar to each other<br/>in the way they work.</p>
+      <p begin="00:03:39.670" end="00:03:42.550">Okay so now we have this<br/>debug_logging helper.</p>
+      <p begin="00:03:42.550" end="00:03:45.161">Let's bring back the<br/>my_function() from before,</p>
+      <p begin="00:03:45.161" end="00:03:47.520">we run this like before:<br/>we'll see "A real error!"</p>
+      <p begin="00:03:47.520" end="00:03:49.000">as the only thing.</p>
+      <p begin="00:03:49.000" end="00:03:51.463">But what's interesting now is<br/>we can run this in a With block,</p>
+      <p begin="00:03:51.463" end="00:03:53.118">so this is the function...</p>
+      <p begin="00:03:53.118" end="00:03:54.859">we can say With debug_logging,</p>
+      <p begin="00:03:54.859" end="00:03:57.263">and I want to be able to<br/>see the debug log level.</p>
+      <p begin="00:03:57.263" end="00:03:58.774">Run my_function.</p>
+      <p begin="00:03:58.774" end="00:03:59.964">And when I run it this way,</p>
+      <p begin="00:03:59.964" end="00:04:02.176">now we'll see all the debug messages</p>
+      <p begin="00:04:02.176" end="00:04:05.066">that were done inside my_function</p>
+      <p begin="00:04:05.066" end="00:04:07.197">even though the program's<br/>default logging level</p>
+      <p begin="00:04:07.197" end="00:04:07.939">is setting to WARNING.</p>
+      <p begin="00:04:07.939" end="00:04:12.682">And then if we call my_function()<br/>after the With block finishes,</p>
+      <p begin="00:04:12.682" end="00:04:15.132">we'll only see the real error message.</p>
+      <p begin="00:04:15.132" end="00:04:19.023">The debug_logging contextlib<br/>helper that we wrote</p>
+      <p begin="00:04:19.023" end="00:04:21.653">properly resets the log level,<br/>and the way that works is</p>
+      <p begin="00:04:21.653" end="00:04:25.833">it's again going to get the<br/>logger, get its effective level,</p>
+      <p begin="00:04:25.833" end="00:04:27.573">set the level to the new one we wanted</p>
+      <p begin="00:04:27.573" end="00:04:28.854">which is debug in this case,</p>
+      <p begin="00:04:28.854" end="00:04:30.934">let the code inside the With block run,</p>
+      <p begin="00:04:30.934" end="00:04:32.035">and then when it's finished,</p>
+      <p begin="00:04:32.035" end="00:04:35.095">it'll set the level back to<br/>what it retrieved before.</p>
+      <p begin="00:04:35.095" end="00:04:37.485">So restoring the previous state.</p>
+      <p begin="00:04:38.255" end="00:04:41.436">When you're defining a<br/>contextmanager with contextlib,</p>
+      <p begin="00:04:41.436" end="00:04:43.589">any exceptions that<br/>happen in the With block</p>
+      <p begin="00:04:43.589" end="00:04:47.729">will be re-raised to your code<br/>inside your contextmanager.</p>
+      <p begin="00:04:47.729" end="00:04:50.319">So, for example, we could<br/>define another contextmanager</p>
+      <p begin="00:04:50.319" end="00:04:53.710">that swallows exceptions entirely</p>
+      <p begin="00:04:55.330" end="00:04:57.352">of a certain class,<br/>and what it would do is</p>
+      <p begin="00:04:57.352" end="00:05:00.082">it would Try to do the code from before,</p>
+      <p begin="00:05:00.082" end="00:05:02.093">so it would just immediately start running</p>
+      <p begin="00:05:02.093" end="00:05:04.854">the inside of the With block,<br/>but then it would catch</p>
+      <p begin="00:05:04.854" end="00:05:07.815">any exception that happened<br/>inside the With block</p>
+      <p begin="00:05:07.815" end="00:05:12.175">of the given class type,<br/>and just log that exception.</p>
+      <p begin="00:05:14.536" end="00:05:15.706">And this works because</p>
+      <p begin="00:05:15.706" end="00:05:18.366">any exception raised inside the With block</p>
+      <p begin="00:05:18.366" end="00:05:21.867">will be re-raised inside<br/>of this contextmanager</p>
+      <p begin="00:05:21.867" end="00:05:24.298">you've defined at the point<br/>of the Yield statement.</p>
+      <p begin="00:05:24.298" end="00:05:27.238">That's how it works: it's<br/>by injecting that exception</p>
+      <p begin="00:05:27.238" end="00:05:29.189">into this context managing function.</p>
+      <p begin="00:05:29.189" end="00:05:31.490">So now let's say that I have the value 20,</p>
+      <p begin="00:05:31.490" end="00:05:33.370">and I want to use this</p>
+      <p begin="00:05:33.370" end="00:05:35.730">I can say With swallow_exception().</p>
+      <p begin="00:05:35.730" end="00:05:38.830">Let's ignore zero division errors,</p>
+      <p begin="00:05:38.830" end="00:05:42.660">let's say the value divided by zero.</p>
+      <p begin="00:05:43.410" end="00:05:44.790">So you can see here that</p>
+      <p begin="00:05:44.790" end="00:05:45.990">there's an exception--</p>
+      <p begin="00:05:45.990" end="00:05:47.750">Oh, I didn't import logging!</p>
+      <p begin="00:05:47.750" end="00:05:50.530">So if I import logging<br/>now, you'll see that</p>
+      <p begin="00:05:50.530" end="00:05:54.210">my code at the bottom<br/>of the contextmanager</p>
+      <p begin="00:05:54.210" end="00:05:56.870">will correctly catch<br/>the zero division error,</p>
+      <p begin="00:05:56.870" end="00:05:59.230">and then log the fact that<br/>there was an exception</p>
+      <p begin="00:05:59.230" end="00:06:01.411">that was being swallowed, but<br/>then it'll continue to run</p>
+      <p begin="00:06:01.411" end="00:06:03.231">as if nothing happened.</p>
+      <p begin="00:06:03.231" end="00:06:06.871">So this code will actually<br/>keep running down and run Done</p>
+      <p begin="00:06:06.871" end="00:06:08.331">instead of raising an exception,</p>
+      <p begin="00:06:08.331" end="00:06:10.532">and causing the entire program to crash.</p>
+      <p begin="00:06:10.532" end="00:06:11.953">The contextmanager that's passed to a</p>
+      <p begin="00:06:11.953" end="00:06:13.394">With statement can also return an object,</p>
+      <p begin="00:06:13.394" end="00:06:14.694">so the most common one is</p>
+      <p begin="00:06:14.694" end="00:06:16.594">opening a file handle.</p>
+      <p begin="00:06:18.804" end="00:06:22.091">And you can use this As clause</p>
+      <p begin="00:06:22.091" end="00:06:25.531">to grab the handle and<br/>then write something to it.</p>
+      <p begin="00:06:28.081" end="00:06:29.691">This works because the context manager</p>
+      <p begin="00:06:29.691" end="00:06:31.651">opened the Open function<br/>as a contextmanager,</p>
+      <p begin="00:06:31.651" end="00:06:34.751">it returns a handle, the<br/>handle's good for the interior</p>
+      <p begin="00:06:34.751" end="00:06:38.171">of the With block, and<br/>this works correctly.</p>
+      <p begin="00:06:38.171" end="00:06:42.370">And it's equivalent to a<br/>Try-Finally that looks like this:</p>
+      <p begin="00:06:42.370" end="00:06:46.911">So we open the function as before,</p>
+      <p begin="00:06:47.632" end="00:06:50.373">we write some data exactly the same way,</p>
+      <p begin="00:06:51.163" end="00:06:54.013">and then we finally close the handle.</p>
+      <p begin="00:06:54.263" end="00:06:55.964">So the With statement<br/>also has a short-hand way</p>
+      <p begin="00:06:55.964" end="00:06:58.085">of representing this handle identifier</p>
+      <p begin="00:06:58.085" end="00:06:59.675">through this exchange.</p>
+      <p begin="00:06:59.696" end="00:07:01.766">To enable your own<br/>functions to supply values</p>
+      <p begin="00:07:01.766" end="00:07:04.027">for As targets, all you need<br/>to do is Yield the value</p>
+      <p begin="00:07:04.027" end="00:07:06.147">from your contextmanager.</p>
+      <p begin="00:07:07.147" end="00:07:10.517">So to go back to that example from before,</p>
+      <p begin="00:07:12.887" end="00:07:15.938">we have our contextmanager<br/>that we're defining,</p>
+      <p begin="00:07:16.049" end="00:07:19.090">we have the log level<br/>helper that we want to have.</p>
+      <p begin="00:07:19.090" end="00:07:20.810">Let's say that it's going to have</p>
+      <p begin="00:07:20.810" end="00:07:22.790">both the log level like before,</p>
+      <p begin="00:07:22.790" end="00:07:24.191">but it's also going to<br/>have a name of a logger,</p>
+      <p begin="00:07:24.191" end="00:07:27.292">because Python supports name loggers.</p>
+      <p begin="00:07:27.292" end="00:07:29.512">So here, I'll get the logger by name,</p>
+      <p begin="00:07:29.512" end="00:07:33.192">I'll then get the old<br/>level from that logger.</p>
+      <p begin="00:07:35.823" end="00:07:37.464">So this is as opposed<br/>to the global logger,</p>
+      <p begin="00:07:37.464" end="00:07:39.084">I'm using a named logger.</p>
+      <p begin="00:07:39.565" end="00:07:42.475">I'll set the level of that<br/>logger to the value I want.</p>
+      <p begin="00:07:42.475" end="00:07:45.085">I'll then yield that logger</p>
+      <p begin="00:07:45.085" end="00:07:48.655">to whoever's actually<br/>consuming the contextmanager,</p>
+      <p begin="00:07:48.655" end="00:07:50.115">and finally I'll restore that logger</p>
+      <p begin="00:07:50.115" end="00:07:52.195">back to the old level.</p>
+      <p begin="00:07:56.705" end="00:08:00.655">So I can now use this in<br/>a statement where I say,</p>
+      <p begin="00:08:00.655" end="00:08:04.906">well with log level of logging DEBUG,</p>
+      <p begin="00:08:04.906" end="00:08:08.756">I'll have the "my-log"<br/>logger As a special logger.</p>
+      <p begin="00:08:08.756" end="00:08:11.256">Because this contextmanager<br/>only modifies the log level</p>
+      <p begin="00:08:11.256" end="00:08:13.616">of the logger that I've named,</p>
+      <p begin="00:08:13.616" end="00:08:15.996">we can do two types of<br/>debug messaging here</p>
+      <p begin="00:08:15.996" end="00:08:17.916">that will actually act differently.</p>
+      <p begin="00:08:17.916" end="00:08:22.668">So a logging debug at<br/>the global logger will</p>
+      <p begin="00:08:25.491" end="00:08:29.921">will not show, because the<br/>global log level is WARNING.</p>
+      <p begin="00:08:29.921" end="00:08:33.792">Whereas, if I actually<br/>the logger's debug method,</p>
+      <p begin="00:08:33.792" end="00:08:36.922">which is the named "my-log" logger,</p>
+      <p begin="00:08:38.573" end="00:08:40.744">then that one will actually<br/>print out to screen.</p>
+      <p begin="00:08:40.744" end="00:08:42.364">Outside of the context of the With block,</p>
+      <p begin="00:08:42.364" end="00:08:43.925">we can actually get that logger again,</p>
+      <p begin="00:08:47.785" end="00:08:50.961">and we'll see now that the debug call</p>
+      <p begin="00:08:53.245" end="00:08:55.512">doesn't actually print anything<br/>the second time around.</p>
+      <p begin="00:08:55.512" end="00:08:58.642">But calling the logger's error log will.</p>
+      <p begin="00:09:00.172" end="00:09:02.192">So the contextmanager has let us</p>
+      <p begin="00:09:02.192" end="00:09:05.452">not only produce reusable<br/>Try-Finally behavior,</p>
+      <p begin="00:09:05.452" end="00:09:08.352">but also supply context back to the caller</p>
+      <p begin="00:09:08.352" end="00:09:10.092">that they can use in the With block</p>
+      <p begin="00:09:10.092" end="00:09:13.164">to have a connection to<br/>the reason the With block</p>
+      <p begin="00:09:13.164" end="00:09:14.294">is there in the first place.</p>
+      <p begin="00:09:14.294" end="00:09:15.655">In this case it's the log level</p>
+      <p begin="00:09:15.655" end="00:09:17.855">in the logger object that was retrieved,</p>
+      <p begin="00:09:17.855" end="00:09:20.215">in other cases it's the<br/>file handle that was opened</p>
+      <p begin="00:09:20.215" end="00:09:21.956">that then is automatically closed.</p>
+      <p begin="00:09:21.956" end="00:09:24.316">So this makes it a lot easier to create</p>
+      <p begin="00:09:24.316" end="00:09:26.756">the Try-Finally pattern<br/>without having to have</p>
+      <p begin="00:09:26.756" end="00:09:28.916">a lot of the boilerplate around both</p>
+      <p begin="00:09:28.916" end="00:09:31.366">what's before the Try block and<br/>what's in the Finally block.</p>
+    </div>
+  </body>
+</tt>

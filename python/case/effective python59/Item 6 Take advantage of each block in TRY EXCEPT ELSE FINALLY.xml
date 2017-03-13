@@ -1,0 +1,101 @@
+<tt xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
+  <head>
+    <styling>
+      <style xml:id="basic" tts:textAlign="center"/>
+    </styling>
+    <ttm:metadata>
+      <ttm:title>9780134175249-EPLL_01_03.dfxp</ttm:title>
+    </ttm:metadata>
+  </head>
+  <body style="basic">
+    <div>
+      <p begin="00:00:06.107" end="00:00:07.388">- [Voiceover] The range<br/>built-in function is useful</p>
+      <p begin="00:00:07.388" end="00:00:09.350">for loops to iterate<br/>over a set of integers.</p>
+      <p begin="00:00:09.350" end="00:00:13.327">So for example, I can go<br/>over a range of 64 integers,</p>
+      <p begin="00:00:14.363" end="00:00:15.515">print out their position.</p>
+      <p begin="00:00:15.515" end="00:00:16.838">Now let's say I wanted to extend this</p>
+      <p begin="00:00:16.838" end="00:00:21.403">to actually create a random<br/>bit string of 64 bits.</p>
+      <p begin="00:00:21.403" end="00:00:24.734">So I can import for random,</p>
+      <p begin="00:00:24.734" end="00:00:27.675">the integer, a random integer.</p>
+      <p begin="00:00:27.675" end="00:00:31.014">I can create a default integer</p>
+      <p begin="00:00:31.014" end="00:00:33.105">that's just zero,</p>
+      <p begin="00:00:33.105" end="00:00:34.673">and then, I can basically figure out</p>
+      <p begin="00:00:34.673" end="00:00:39.451">for each position, all of<br/>the 64 bits in this integer,</p>
+      <p begin="00:00:39.451" end="00:00:42.438">"What do I want to set<br/>each bit to randomly?"</p>
+      <p begin="00:00:42.438" end="00:00:45.744">So I can say randint, pick a zero or one.</p>
+      <p begin="00:00:45.744" end="00:00:47.238">If it's zero then I won't set the bit.</p>
+      <p begin="00:00:47.238" end="00:00:52.238">If it's one then I want to OR in that bit</p>
+      <p begin="00:00:52.315" end="00:00:53.680">in the given position of i,</p>
+      <p begin="00:00:53.680" end="00:00:55.003">so I shift.</p>
+      <p begin="00:00:55.003" end="00:00:57.648">This is a left-shift of the number one,</p>
+      <p begin="00:00:57.648" end="00:01:01.325">up to 64 based on the position of i.</p>
+      <p begin="00:01:01.325" end="00:01:02.929">So you do the zero at the<br/>position all the way up</p>
+      <p begin="00:01:02.929" end="00:01:05.286">to the 63rd index.</p>
+      <p begin="00:01:05.286" end="00:01:07.675">I set that bit by OR-ing it in.</p>
+      <p begin="00:01:07.675" end="00:01:11.984">And after the sleep runs, I<br/>can print out the random bits</p>
+      <p begin="00:01:11.984" end="00:01:14.758">and see that I get a different<br/>bit string every time.</p>
+      <p begin="00:01:14.758" end="00:01:16.074">So the range makes this really clear</p>
+      <p begin="00:01:16.074" end="00:01:18.150">because I'm iterating<br/>over a set of integers</p>
+      <p begin="00:01:18.150" end="00:01:21.393">from zero up to but not including 64.</p>
+      <p begin="00:01:21.393" end="00:01:23.228">Separate from range, when<br/>you have a data structure</p>
+      <p begin="00:01:23.228" end="00:01:25.104">to iterate over, like a list of strings,</p>
+      <p begin="00:01:25.104" end="00:01:27.024">you can loop directly over the sequence.</p>
+      <p begin="00:01:27.024" end="00:01:29.243">So here's the list of ice cream flavors.</p>
+      <p begin="00:01:29.243" end="00:01:33.169">I can go through each<br/>flavor in the flavor_list</p>
+      <p begin="00:01:33.169" end="00:01:37.973">and I can say that each<br/>flavor is delicious.</p>
+      <p begin="00:01:39.273" end="00:01:41.179">Often, you'll want to iterate over a list</p>
+      <p begin="00:01:41.179" end="00:01:44.817">and also know the index of<br/>the current item in the list.</p>
+      <p begin="00:01:44.817" end="00:01:46.609">For example, say that<br/>these ice cream flavors</p>
+      <p begin="00:01:46.609" end="00:01:49.211">are in order of your<br/>favorite to least favorite.</p>
+      <p begin="00:01:49.211" end="00:01:51.131">You can rewrite this list to say</p>
+      <p begin="00:01:51.131" end="00:01:54.971">to go over each item in the<br/>list based on its index,</p>
+      <p begin="00:01:54.971" end="00:01:58.598">and then you could use the<br/>index to get each flavor,</p>
+      <p begin="00:01:58.598" end="00:02:02.267">and then print out how much you like it</p>
+      <p begin="00:02:02.267" end="00:02:05.163">or what its position is<br/>in your list of favorites.</p>
+      <p begin="00:02:06.503" end="00:02:09.350">Actually plus one, so this is the first.</p>
+      <p begin="00:02:09.350" end="00:02:10.843">The problem is this looks clumsy</p>
+      <p begin="00:02:10.843" end="00:02:12.209">compared to the other examples</p>
+      <p begin="00:02:12.209" end="00:02:14.555">that we had before of range</p>
+      <p begin="00:02:14.555" end="00:02:16.241">on its own through integers</p>
+      <p begin="00:02:16.241" end="00:02:19.014">or just for flavor in flavor_list</p>
+      <p begin="00:02:19.014" end="00:02:20.806">where we went over the list of flavors.</p>
+      <p begin="00:02:20.806" end="00:02:22.518">You have to get the length of the list</p>
+      <p begin="00:02:22.518" end="00:02:24.523">here in the range.</p>
+      <p begin="00:02:24.523" end="00:02:26.195">You have to index into the array</p>
+      <p begin="00:02:26.195" end="00:02:28.363">to get the actual flavor out.</p>
+      <p begin="00:02:28.363" end="00:02:29.385">It's just pretty hard to read.</p>
+      <p begin="00:02:29.385" end="00:02:30.731">There's just a bunch<br/>of extra noise in here</p>
+      <p begin="00:02:30.731" end="00:02:32.256">you really don't need.</p>
+      <p begin="00:02:33.201" end="00:02:34.657">To address this, Python provides</p>
+      <p begin="00:02:34.657" end="00:02:36.918">the enumerate built-in function.</p>
+      <p begin="00:02:36.918" end="00:02:39.899">Enumerate wraps any interator<br/>with a lazy generator,</p>
+      <p begin="00:02:39.899" end="00:02:44.294">and it yields pairs of the<br/>loop index in the list,</p>
+      <p begin="00:02:44.294" end="00:02:46.214">and the item from that list.</p>
+      <p begin="00:02:46.214" end="00:02:48.283">So here we can run enumerate<br/>on the flavor_list,</p>
+      <p begin="00:02:48.283" end="00:02:50.118">and we can see that enumerate's</p>
+      <p begin="00:02:50.118" end="00:02:52.102">going to generate zero with index</p>
+      <p begin="00:02:52.102" end="00:02:53.379">and then the actual value,</p>
+      <p begin="00:02:53.379" end="00:02:55.686">the first index and then<br/>the value from that,</p>
+      <p begin="00:02:55.686" end="00:02:57.776">and all the way on and on.</p>
+      <p begin="00:02:57.776" end="00:02:59.710">You'll notice that I used<br/>the list function here</p>
+      <p begin="00:02:59.710" end="00:03:03.472">to actually exhaust the<br/>generator that enumerate returns.</p>
+      <p begin="00:03:03.472" end="00:03:06.054">So if you actually just look<br/>at enumerate on its own,</p>
+      <p begin="00:03:06.054" end="00:03:08.272">it returns this lazy generator object</p>
+      <p begin="00:03:08.272" end="00:03:10.534">that you can then iterate over.</p>
+      <p begin="00:03:10.534" end="00:03:12.198">Using enumerate, the resulting code</p>
+      <p begin="00:03:12.198" end="00:03:15.398">of showing my favorite list<br/>of flavors is a lot cleaner.</p>
+      <p begin="00:03:15.398" end="00:03:18.897">So I can say give me for i and flavor</p>
+      <p begin="00:03:18.897" end="00:03:22.566">in the flavor_list,</p>
+      <p begin="00:03:22.566" end="00:03:25.766">and then I can print out each flavor,</p>
+      <p begin="00:03:25.766" end="00:03:27.562">how much I like it.</p>
+      <p begin="00:03:31.238" end="00:03:32.347">You can make this even shorter</p>
+      <p begin="00:03:32.347" end="00:03:34.065">by specifying which number enumerate</p>
+      <p begin="00:03:34.065" end="00:03:35.894">should start counting at.</p>
+      <p begin="00:03:35.894" end="00:03:38.139">So here I have this offset by one.</p>
+      <p begin="00:03:38.139" end="00:03:40.272">I can actually remove that</p>
+      <p begin="00:03:40.272" end="00:03:42.448">and put it in the the<br/>enumerate call itself</p>
+      <p begin="00:03:42.448" end="00:03:43.729">to tell it where to start counting.</p>
+      <p begin="00:03:43.729" end="00:03:44.710">Same outcome.</p>
+    </div>
+  </body>
+</tt>
