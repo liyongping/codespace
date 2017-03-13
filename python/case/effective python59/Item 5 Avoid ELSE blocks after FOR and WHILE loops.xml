@@ -1,0 +1,175 @@
+<tt xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
+  <head>
+    <styling>
+      <style xml:id="basic" tts:textAlign="center"/>
+    </styling>
+    <ttm:metadata>
+      <ttm:title>9780134175249-EPLL_01_05.dfxp</ttm:title>
+    </ttm:metadata>
+  </head>
+  <body style="basic">
+    <div>
+      <p begin="00:00:06.485" end="00:00:08.149">- [Voiceover] Python loops<br/>have an extra feature</p>
+      <p begin="00:00:08.149" end="00:00:10.645">that's not available in most<br/>other programming languages.</p>
+      <p begin="00:00:10.645" end="00:00:13.865">So, if you have a loop, as you expect,</p>
+      <p begin="00:00:17.210" end="00:00:19.034">that'll run like normal.</p>
+      <p begin="00:00:19.436" end="00:00:21.300">But you can add something<br/>called an else block</p>
+      <p begin="00:00:21.300" end="00:00:24.355">right off the interior block<br/>that will do something else.</p>
+      <p begin="00:00:26.686" end="00:00:28.372">Now what's suprising<br/>is that the else block</p>
+      <p begin="00:00:28.372" end="00:00:31.134">ran immediately after the loop finished.</p>
+      <p begin="00:00:31.134" end="00:00:34.140">And it's confusing because<br/>why is it called else</p>
+      <p begin="00:00:34.140" end="00:00:35.901">when it's reallly and.</p>
+      <p begin="00:00:35.901" end="00:00:37.512">You know, it did all the loop</p>
+      <p begin="00:00:37.512" end="00:00:40.832">and then it also ran the else block.</p>
+      <p begin="00:00:41.414" end="00:00:43.547">If you think about other<br/>constructs in Python,</p>
+      <p begin="00:00:43.547" end="00:00:44.667">like an if, else statement,</p>
+      <p begin="00:00:44.667" end="00:00:46.270">so let's say we have a number</p>
+      <p begin="00:00:46.758" end="00:00:48.761">and we're trying to see<br/>if X is greater than five,</p>
+      <p begin="00:00:48.761" end="00:00:50.675">and we say it's greater.</p>
+      <p begin="00:00:51.118" end="00:00:52.899">And otherwise, we'd say it's,</p>
+      <p begin="00:00:52.899" end="00:00:54.024">or it's less.</p>
+      <p begin="00:00:54.713" end="00:00:56.035">And so, it's less.</p>
+      <p begin="00:00:56.035" end="00:00:58.877">So, this makes sense<br/>because the else means</p>
+      <p begin="00:00:59.662" end="00:01:03.318">do this block if the block<br/>before didn't happen.</p>
+      <p begin="00:01:03.318" end="00:01:04.598">So, you know, to do this</p>
+      <p begin="00:01:04.598" end="00:01:06.011">or else, do that.</p>
+      <p begin="00:01:07.222" end="00:01:09.270">Exception handling is<br/>kind of the same thing.</p>
+      <p begin="00:01:09.270" end="00:01:13.284">So, if we have an exception that we raise</p>
+      <p begin="00:01:14.656" end="00:01:16.731">and then we catch that exception,</p>
+      <p begin="00:01:22.376" end="00:01:23.731">then we also have in here we know</p>
+      <p begin="00:01:23.731" end="00:01:26.136">this will not be reached<br/>because we raised the exception.</p>
+      <p begin="00:01:26.536" end="00:01:29.054">So, this is another<br/>example where the except</p>
+      <p begin="00:01:29.054" end="00:01:32.305">happens because the other<br/>one didn't finish properly.</p>
+      <p begin="00:01:32.305" end="00:01:34.769">So, it's kind of like<br/>an else statement there.</p>
+      <p begin="00:01:34.769" end="00:01:36.412">It's the second block that<br/>comes after the main block</p>
+      <p begin="00:01:36.412" end="00:01:37.959">that only happens if the first block</p>
+      <p begin="00:01:37.959" end="00:01:39.383">didn't happen correctly.</p>
+      <p begin="00:01:40.006" end="00:01:41.233">There's even one more construct</p>
+      <p begin="00:01:41.233" end="00:01:45.443">where if you're creating<br/>a try except else.</p>
+      <p begin="00:01:46.131" end="00:01:47.756">So, let's say there's an exception,</p>
+      <p begin="00:01:48.870" end="00:01:50.604">this is not gonna happen<br/>because it's not raised.</p>
+      <p begin="00:01:51.003" end="00:01:52.807">So in that case, there's an else statement</p>
+      <p begin="00:01:52.807" end="00:01:54.940">on the except on this construction</p>
+      <p begin="00:01:54.940" end="00:01:56.665">where you can say, you know,</p>
+      <p begin="00:01:56.665" end="00:01:58.418">everything was fine.</p>
+      <p begin="00:01:58.978" end="00:02:00.652">If we run this, everything was fine runs.</p>
+      <p begin="00:02:00.652" end="00:02:02.902">So this else doesn't happen inside</p>
+      <p begin="00:02:02.902" end="00:02:04.633">the exception handling of try.</p>
+      <p begin="00:02:05.098" end="00:02:07.413">It only runs if except didn't happen.</p>
+      <p begin="00:02:07.413" end="00:02:08.828">That's when you run this.</p>
+      <p begin="00:02:08.828" end="00:02:11.070">So, that also makes sense intuitively.</p>
+      <p begin="00:02:12.495" end="00:02:13.914">And the last construct<br/>that's similar to that</p>
+      <p begin="00:02:13.914" end="00:02:14.863">is try finally.</p>
+      <p begin="00:02:14.863" end="00:02:18.345">So, try finally this always runs.</p>
+      <p begin="00:02:18.895" end="00:02:21.704">So, finally is gonna happen in all cases.</p>
+      <p begin="00:02:22.041" end="00:02:24.135">If we raise an exception here instead,</p>
+      <p begin="00:02:25.922" end="00:02:28.054">this always runs will always still happen.</p>
+      <p begin="00:02:28.054" end="00:02:30.191">So, try this finally, do this.</p>
+      <p begin="00:02:30.494" end="00:02:33.704">It's intuitive because it's<br/>always do what is final</p>
+      <p begin="00:02:33.704" end="00:02:35.527">after trying the block before.</p>
+      <p begin="00:02:35.527" end="00:02:37.915">So, the label finally<br/>intuitively makes sense</p>
+      <p begin="00:02:37.915" end="00:02:40.432">as a reader that I'm<br/>also going to do this.</p>
+      <p begin="00:02:40.432" end="00:02:42.432">It's more like and also do this.</p>
+      <p begin="00:02:43.525" end="00:02:46.673">So given all the uses of<br/>except, else, and finally</p>
+      <p begin="00:02:46.673" end="00:02:48.442">in Python, a new programmer might assume</p>
+      <p begin="00:02:48.442" end="00:02:50.575">that the else part<br/>before else means do this</p>
+      <p begin="00:02:50.575" end="00:02:52.753">if the loop wasn't completed.</p>
+      <p begin="00:02:53.251" end="00:02:56.056">But in reality, it does<br/>exactly the opposite.</p>
+      <p begin="00:02:56.056" end="00:02:57.177">And what's also interesting is that</p>
+      <p begin="00:02:57.177" end="00:02:59.408">if you add a break statement in here,</p>
+      <p begin="00:03:03.712" end="00:03:05.003">the else won't happen.</p>
+      <p begin="00:03:05.003" end="00:03:06.251">And intuitively you might think,</p>
+      <p begin="00:03:06.251" end="00:03:08.341">well, if I'm gonna break, that<br/>means I didn't do the loops.</p>
+      <p begin="00:03:08.341" end="00:03:10.212">And now the else block should run.</p>
+      <p begin="00:03:10.571" end="00:03:12.548">So, this is quite a surprise.</p>
+      <p begin="00:03:12.831" end="00:03:14.804">Another suprise is that if<br/>you have an empty sequence,</p>
+      <p begin="00:03:14.804" end="00:03:18.292">like an empty list, then<br/>you know that the interior</p>
+      <p begin="00:03:18.292" end="00:03:19.479">is never gonna run.</p>
+      <p begin="00:03:20.531" end="00:03:22.621">But, you might assume that the else block</p>
+      <p begin="00:03:22.621" end="00:03:25.139">would't run either because<br/>there were no contents.</p>
+      <p begin="00:03:25.139" end="00:03:27.425">But, the else block still<br/>runs in this case also.</p>
+      <p begin="00:03:28.146" end="00:03:29.004">It's confusing.</p>
+      <p begin="00:03:29.630" end="00:03:31.046">Another example that's also confusing</p>
+      <p begin="00:03:31.046" end="00:03:32.841">is that the else block will always run</p>
+      <p begin="00:03:33.262" end="00:03:34.990">even when a loop is false.</p>
+      <p begin="00:03:34.990" end="00:03:37.811">So, this will never run, as we know.</p>
+      <p begin="00:03:40.591" end="00:03:42.478">But the else block runs,</p>
+      <p begin="00:03:42.478" end="00:03:44.390">even though that the beginning is false.</p>
+      <p begin="00:03:45.217" end="00:03:46.925">The rationale for these behaviors is that</p>
+      <p begin="00:03:46.925" end="00:03:49.356">else blocks after loops are useful</p>
+      <p begin="00:03:49.356" end="00:03:51.322">when you're using loops<br/>to search for something.</p>
+      <p begin="00:03:52.160" end="00:03:55.199">For example, let's say<br/>that we had two numbers,</p>
+      <p begin="00:03:55.199" end="00:03:57.738">A and B, and we're trying to determine</p>
+      <p begin="00:03:57.738" end="00:03:59.379">if they're coprime, meaning their only</p>
+      <p begin="00:03:59.379" end="00:04:00.720">common divisor is one.</p>
+      <p begin="00:04:00.720" end="00:04:05.720">So, I can iterate through<br/>all of the potential factors.</p>
+      <p begin="00:04:06.154" end="00:04:07.432">The minimum I'm using,</p>
+      <p begin="00:04:07.432" end="00:04:09.469">'cause I only have to go up<br/>to the smallest of the two.</p>
+      <p begin="00:04:09.796" end="00:04:13.293">I print that I'm testing<br/>out each index of I.</p>
+      <p begin="00:04:13.293" end="00:04:17.099">And then I see if I evenly divides A,</p>
+      <p begin="00:04:17.099" end="00:04:18.384">so the remainder is zero.</p>
+      <p begin="00:04:19.105" end="00:04:21.654">And I evenly divides B,</p>
+      <p begin="00:04:21.654" end="00:04:23.728">so the remainder is also zero.</p>
+      <p begin="00:04:24.213" end="00:04:28.106">Then I know that they are not a coprime</p>
+      <p begin="00:04:28.106" end="00:04:31.403">because they have a factor<br/>that is larger than one,</p>
+      <p begin="00:04:31.403" end="00:04:33.151">since we started at two,</p>
+      <p begin="00:04:33.151" end="00:04:34.302">that divides them both.</p>
+      <p begin="00:04:34.302" end="00:04:35.197">So, I break out.</p>
+      <p begin="00:04:35.197" end="00:04:37.775">Otherwise, I have an else loop here,</p>
+      <p begin="00:04:37.775" end="00:04:39.770">an else block, where I say that</p>
+      <p begin="00:04:39.770" end="00:04:41.012">I know that they're coprime.</p>
+      <p begin="00:04:41.477" end="00:04:43.727">So, the else block only runs</p>
+      <p begin="00:04:43.727" end="00:04:45.236">if we didn't break out.</p>
+      <p begin="00:04:45.945" end="00:04:48.189">So, we know that we will only</p>
+      <p begin="00:04:48.589" end="00:04:50.521">run the else block once we've tested</p>
+      <p begin="00:04:50.521" end="00:04:52.525">every common divisor to see</p>
+      <p begin="00:04:52.525" end="00:04:54.525">if it evenly divides both A and B.</p>
+      <p begin="00:04:56.365" end="00:04:58.587">In practice, you woudn't<br/>write the code this way.</p>
+      <p begin="00:04:59.190" end="00:05:00.651">Instead, you'd write a helper function</p>
+      <p begin="00:05:00.651" end="00:05:02.608">to actually do this calculatioin for you.</p>
+      <p begin="00:05:03.126" end="00:05:05.689">So, there's two real<br/>common styles for this.</p>
+      <p begin="00:05:06.175" end="00:05:07.955">The first one is to do returns.</p>
+      <p begin="00:05:07.955" end="00:05:10.423">So, take this inner loop out,</p>
+      <p begin="00:05:10.877" end="00:05:12.935">create a function called coprime</p>
+      <p begin="00:05:12.935" end="00:05:14.407">that tests A and B.</p>
+      <p begin="00:05:15.365" end="00:05:16.381">Tab all this stuff in.</p>
+      <p begin="00:05:17.251" end="00:05:18.827">It would go through the loop,</p>
+      <p begin="00:05:18.827" end="00:05:21.027">test each item as before.</p>
+      <p begin="00:05:21.515" end="00:05:23.358">And when it finds out they're not coprime,</p>
+      <p begin="00:05:23.358" end="00:05:26.307">because they have a<br/>common divisor above one,</p>
+      <p begin="00:05:26.709" end="00:05:29.380">it would return false,<br/>they're not coprime.</p>
+      <p begin="00:05:30.185" end="00:05:32.275">Otherwise, it would return true.</p>
+      <p begin="00:05:32.275" end="00:05:34.843">So you added this early<br/>return from the inside loop.</p>
+      <p begin="00:05:34.843" end="00:05:38.672">And now when you run this<br/>function on four and nine,</p>
+      <p begin="00:05:39.168" end="00:05:41.144">we see that indeed they are coprime,</p>
+      <p begin="00:05:41.684" end="00:05:44.127">whereas we can test<br/>another set of numbers,</p>
+      <p begin="00:05:44.127" end="00:05:46.237">three and six, where they are not coprime</p>
+      <p begin="00:05:46.237" end="00:05:48.424">because they have a<br/>common divisor of three.</p>
+      <p begin="00:05:48.424" end="00:05:50.144">This is much easier to<br/>read than the other loop.</p>
+      <p begin="00:05:51.195" end="00:05:52.593">The second common way to do this</p>
+      <p begin="00:05:52.593" end="00:05:54.600">is to have a result<br/>variable that indicates</p>
+      <p begin="00:05:55.055" end="00:05:56.868">that you found what you're<br/>looking for in the loop.</p>
+      <p begin="00:05:56.868" end="00:05:58.908">So, let's say that this is<br/>the second coprime function.</p>
+      <p begin="00:05:59.597" end="00:06:01.986">We have a variable that<br/>indicates whether or not</p>
+      <p begin="00:06:01.986" end="00:06:03.712">we found that they're coprime.</p>
+      <p begin="00:06:03.712" end="00:06:06.070">It begins by saying that, yes,</p>
+      <p begin="00:06:06.070" end="00:06:07.455">they are coprime.</p>
+      <p begin="00:06:07.455" end="00:06:08.936">We iterate through the loop as before,</p>
+      <p begin="00:06:08.936" end="00:06:09.992">but instead of an early return,</p>
+      <p begin="00:06:09.992" end="00:06:12.571">we say is coprime equals false</p>
+      <p begin="00:06:12.571" end="00:06:13.578">and we break.</p>
+      <p begin="00:06:13.937" end="00:06:16.890">And then we return, is coprime.</p>
+      <p begin="00:06:16.890" end="00:06:18.584">And so now if we do the same thing</p>
+      <p begin="00:06:18.584" end="00:06:19.918">with the second coprime function,</p>
+      <p begin="00:06:20.660" end="00:06:22.632">we'll see that we get<br/>the exact same output.</p>
+      <p begin="00:06:22.633" end="00:06:25.601">Again, not using the else<br/>block from the for loop.</p>
+      <p begin="00:06:26.172" end="00:06:28.541">Both of these approaches<br/>that use a helper function</p>
+      <p begin="00:06:28.541" end="00:06:31.337">are so much clearer to<br/>readers of unfamiliar code</p>
+      <p begin="00:06:31.833" end="00:06:34.183">that it's just a way better to do it.</p>
+      <p begin="00:06:34.764" end="00:06:36.919">Loops, like a for loop here,</p>
+      <p begin="00:06:36.919" end="00:06:39.841">should be self-evident to users in Python</p>
+      <p begin="00:06:39.841" end="00:06:41.450">and programmers writing Python code.</p>
+      <p begin="00:06:41.450" end="00:06:45.091">So, I suggest you avoid else<br/>blocks after loops entirely.</p>
+    </div>
+  </body>
+</tt>

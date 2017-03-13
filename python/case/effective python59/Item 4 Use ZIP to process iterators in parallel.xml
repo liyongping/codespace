@@ -1,0 +1,125 @@
+<tt xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
+  <head>
+    <styling>
+      <style xml:id="basic" tts:textAlign="center"/>
+    </styling>
+    <ttm:metadata>
+      <ttm:title>9780134175249-EPLL_01_04.dfxp</ttm:title>
+    </ttm:metadata>
+  </head>
+  <body style="basic">
+    <div>
+      <p begin="00:00:06.220" end="00:00:07.950">- [Voiceover] Often in<br/>Python you find yourself</p>
+      <p begin="00:00:07.950" end="00:00:10.210">with many lists of related objects.</p>
+      <p begin="00:00:10.210" end="00:00:12.090">So here I have a list of names</p>
+      <p begin="00:00:12.090" end="00:00:16.190">and I'll use a list comprehension<br/>to turn a source list</p>
+      <p begin="00:00:16.190" end="00:00:17.980">into a derived list.</p>
+      <p begin="00:00:17.980" end="00:00:21.560">So if I wanna take the<br/>length of each of these names</p>
+      <p begin="00:00:21.560" end="00:00:23.840">I can do list comprehension</p>
+      <p begin="00:00:25.590" end="00:00:29.950">and then get out the number<br/>of letters that are in them.</p>
+      <p begin="00:00:29.950" end="00:00:31.580">Now what's important is that the items</p>
+      <p begin="00:00:31.580" end="00:00:34.190">in the derived list of letters<br/>are related to the items</p>
+      <p begin="00:00:34.190" end="00:00:36.120">in the source list by their indexes.</p>
+      <p begin="00:00:36.120" end="00:00:40.260">So the zeroth index for<br/>Cecilia has seven letters in it</p>
+      <p begin="00:00:40.260" end="00:00:42.660">and that's the zeroth<br/>index in the output list.</p>
+      <p begin="00:00:42.660" end="00:00:45.650">To iterate over both lists<br/>in parallel, I can iterate</p>
+      <p begin="00:00:45.650" end="00:00:48.520">over the length of the names source list.</p>
+      <p begin="00:00:51.330" end="00:00:54.490">And then I can use the<br/>index to get the count,</p>
+      <p begin="00:00:54.490" end="00:00:57.402">the letters, the number of<br/>letters in that other list.</p>
+      <p begin="00:01:03.160" end="00:01:05.280">So I can do this print<br/>out count of each one.</p>
+      <p begin="00:01:05.280" end="00:01:07.760">Now let's say that we wanna<br/>determine which of these names</p>
+      <p begin="00:01:07.760" end="00:01:09.530">is the longest with this loop.</p>
+      <p begin="00:01:09.530" end="00:01:13.000">So I wanna say, I'm trying<br/>to find the longest name</p>
+      <p begin="00:01:13.000" end="00:01:15.590">starts off as none,<br/>haven't found anything.</p>
+      <p begin="00:01:15.590" end="00:01:18.470">The max letters have to be at least zero.</p>
+      <p begin="00:01:18.470" end="00:01:20.710">I'll go through the list like I did before</p>
+      <p begin="00:01:20.710" end="00:01:23.300">but now I'll do a check<br/>where if the current count</p>
+      <p begin="00:01:23.300" end="00:01:25.950">of letters is greater than<br/>the maximum number of letters</p>
+      <p begin="00:01:25.950" end="00:01:29.980">I've seen so far, then I will<br/>say that the longest name</p>
+      <p begin="00:01:30.970" end="00:01:34.060">is equal to the names list index.</p>
+      <p begin="00:01:34.060" end="00:01:36.350">And the max letters is equal to</p>
+      <p begin="00:01:38.220" end="00:01:40.400">the count of the current position.</p>
+      <p begin="00:01:41.370" end="00:01:44.350">This only works because<br/>the offsets here of names</p>
+      <p begin="00:01:44.350" end="00:01:47.540">index i and letters index i match up.</p>
+      <p begin="00:01:48.440" end="00:01:51.710">So I can run this and I can<br/>find that the longest name</p>
+      <p begin="00:01:51.710" end="00:01:52.950">is Cecilia.</p>
+      <p begin="00:01:52.950" end="00:01:54.770">To make this code clear, Python provides</p>
+      <p begin="00:01:54.770" end="00:01:56.590">the zip built-in function.</p>
+      <p begin="00:01:56.590" end="00:01:59.250">In Python 3, zip wraps<br/>two or more iterators</p>
+      <p begin="00:01:59.250" end="00:02:00.690">with a lazy generator.</p>
+      <p begin="00:02:03.080" end="00:02:07.110">So here I can take names and<br/>letters and zip them together</p>
+      <p begin="00:02:07.110" end="00:02:09.850">and get a generator of pairs of the items</p>
+      <p begin="00:02:09.850" end="00:02:11.300">from both of the source lists.</p>
+      <p begin="00:02:11.300" end="00:02:14.130">I'm exhausting this with<br/>the list built-in function</p>
+      <p begin="00:02:14.130" end="00:02:15.470">because zip returns a generator,</p>
+      <p begin="00:02:15.470" end="00:02:18.420">so this will let us actually<br/>see what it produces.</p>
+      <p begin="00:02:18.420" end="00:02:20.960">Going back to the other<br/>example, I can use zip</p>
+      <p begin="00:02:20.960" end="00:02:22.850">to make this code much clearer.</p>
+      <p begin="00:02:22.850" end="00:02:24.980">So instead of iterating over<br/>the range and the length</p>
+      <p begin="00:02:24.980" end="00:02:26.990">of the names, I can just<br/>go through the pairs</p>
+      <p begin="00:02:26.990" end="00:02:31.500">where I have the name and<br/>count over zipping together</p>
+      <p begin="00:02:31.500" end="00:02:34.610">all of the names and all of the letters.</p>
+      <p begin="00:02:34.610" end="00:02:37.520">So this means I can get rid<br/>of this offset, the count,</p>
+      <p begin="00:02:37.520" end="00:02:39.970">I can get rid of this names index</p>
+      <p begin="00:02:39.970" end="00:02:41.980">because I just have name already</p>
+      <p begin="00:02:41.980" end="00:02:44.190">and I'll find the same output.</p>
+      <p begin="00:02:44.190" end="00:02:47.382">There are two big problems<br/>with the zip built-in function.</p>
+      <p begin="00:02:47.382" end="00:02:50.590">The first one is that in Python<br/>2, zip is not a generator.</p>
+      <p begin="00:02:50.590" end="00:02:52.730">So let's say this is Python 2 code.</p>
+      <p begin="00:02:52.730" end="00:02:56.750">If I take a zip of names and<br/>letters and print that out,</p>
+      <p begin="00:02:57.740" end="00:02:59.770">I'm gonna get everything.</p>
+      <p begin="00:02:59.770" end="00:03:02.340">It's not going to be lazy,<br/>so it's gonna create a copy</p>
+      <p begin="00:03:02.340" end="00:03:04.360">of all the items together.</p>
+      <p begin="00:03:04.360" end="00:03:06.890">Whereas if I run this in<br/>Python 3, I actually get</p>
+      <p begin="00:03:06.890" end="00:03:08.990">a zip object as a lazy generator.</p>
+      <p begin="00:03:08.990" end="00:03:11.920">So if you wanna use very<br/>large iterators in Python 2,</p>
+      <p begin="00:03:11.920" end="00:03:14.340">zip is not the right way to do it.</p>
+      <p begin="00:03:14.340" end="00:03:17.660">Instead for Python 2, you<br/>should use the itertools modules</p>
+      <p begin="00:03:17.660" end="00:03:19.370">izip function.</p>
+      <p begin="00:03:19.370" end="00:03:22.260">So from itertools I import izip</p>
+      <p begin="00:03:23.530" end="00:03:25.090">and I call that instead.</p>
+      <p begin="00:03:26.220" end="00:03:29.310">This returns an iterator<br/>very much like the Python 3 1</p>
+      <p begin="00:03:29.310" end="00:03:32.740">and I can exhaust it just like<br/>I could with the Python 3 1.</p>
+      <p begin="00:03:33.850" end="00:03:36.050">The second issue with<br/>the zip built-in function</p>
+      <p begin="00:03:36.050" end="00:03:38.380">is that it behaves strangely<br/>if the input iterators</p>
+      <p begin="00:03:38.380" end="00:03:39.850">are of different lengths.</p>
+      <p begin="00:03:39.850" end="00:03:43.610">So for example, let's say<br/>that we add another name here,</p>
+      <p begin="00:03:44.650" end="00:03:45.600">Rosalind.</p>
+      <p begin="00:03:46.750" end="00:03:50.490">And now we loop over the pairs.</p>
+      <p begin="00:03:55.950" end="00:03:59.920">And print out each name and<br/>how many letters it has.</p>
+      <p begin="00:04:04.120" end="00:04:07.190">So we have Cecilia, Lise, and Marie.</p>
+      <p begin="00:04:07.190" end="00:04:08.550">But you'll notice that Rosalind,</p>
+      <p begin="00:04:08.550" end="00:04:12.220">even though we appended it<br/>there and it's in the names list</p>
+      <p begin="00:04:12.220" end="00:04:15.210">it doesn't show up in the output of zip.</p>
+      <p begin="00:04:15.210" end="00:04:16.740">And this is just how zip works.</p>
+      <p begin="00:04:16.740" end="00:04:20.090">It keeps you in tuples until<br/>any, either of the iterators</p>
+      <p begin="00:04:20.090" end="00:04:21.090">are exhausted.</p>
+      <p begin="00:04:21.090" end="00:04:24.590">So even though names has more to go,</p>
+      <p begin="00:04:24.590" end="00:04:26.290">letters is only three in length</p>
+      <p begin="00:04:26.290" end="00:04:30.050">and it gets exhausted first<br/>and so then the loop exits.</p>
+      <p begin="00:04:30.050" end="00:04:33.370">So this problem doesn't<br/>happen if you know that</p>
+      <p begin="00:04:33.370" end="00:04:35.120">each list is derived from another one</p>
+      <p begin="00:04:35.120" end="00:04:36.330">so they have exactly the same length.</p>
+      <p begin="00:04:36.330" end="00:04:39.520">But when I modified it<br/>here, I'm out of luck.</p>
+      <p begin="00:04:39.520" end="00:04:43.060">The solution to this is<br/>a function from itertools</p>
+      <p begin="00:04:43.060" end="00:04:44.650">called zip longest.</p>
+      <p begin="00:04:46.740" end="00:04:49.982">And zip longest will do the<br/>right thing in this case</p>
+      <p begin="00:04:49.982" end="00:04:52.770">and keep going even when one</p>
+      <p begin="00:04:52.770" end="00:04:54.830">of the iterators has been exhausted.</p>
+      <p begin="00:04:54.830" end="00:04:57.430">So I can modify this function now</p>
+      <p begin="00:04:57.430" end="00:05:02.070">to look at the count and see if it's none.</p>
+      <p begin="00:05:03.060" end="00:05:06.130">Which will mean that we don't<br/>actually know the length</p>
+      <p begin="00:05:06.130" end="00:05:08.370">because it's not present in the list.</p>
+      <p begin="00:05:13.450" end="00:05:16.720">Otherwise if the count's<br/>not none, we're good to go.</p>
+      <p begin="00:05:16.720" end="00:05:18.080">Oh got to import.</p>
+      <p begin="00:05:19.860" end="00:05:22.490">So you can see here Rosalind<br/>is of unknown length.</p>
+      <p begin="00:05:22.490" end="00:05:24.480">And the reason this works<br/>is because zip longest</p>
+      <p begin="00:05:24.480" end="00:05:27.460">returns none in situation<br/>where one iterator</p>
+      <p begin="00:05:27.460" end="00:05:30.170">is longer than the other,<br/>it will put a none value</p>
+      <p begin="00:05:30.170" end="00:05:32.280">in the place of count.</p>
+      <p begin="00:05:32.280" end="00:05:34.750">In Python 2 you can do<br/>exactly the same thing</p>
+      <p begin="00:05:34.750" end="00:05:37.850">except the name of the function<br/>is izip longest instead.</p>
+      <p begin="00:05:37.850" end="00:05:40.490">So running as Python 2, same output.</p>
+    </div>
+  </body>
+</tt>

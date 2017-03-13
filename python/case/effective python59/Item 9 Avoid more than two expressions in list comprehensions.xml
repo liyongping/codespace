@@ -1,0 +1,350 @@
+<tt xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
+  <head>
+    <styling>
+      <style xml:id="basic" tts:textAlign="center"/>
+    </styling>
+    <ttm:metadata>
+      <ttm:title>9780134175249-EPLL_02_02.dfxp</ttm:title>
+    </ttm:metadata>
+  </head>
+  <body style="basic">
+    <div>
+      <p begin="00:00:06.913" end="00:00:08.321">- [Voiceover] Beyond basic usage,</p>
+      <p begin="00:00:08.321" end="00:00:09.900">list comprehensions also support</p>
+      <p begin="00:00:09.900" end="00:00:11.478">multiple levels of looping.</p>
+      <p begin="00:00:11.478" end="00:00:13.334">For example, say you had a matrix,</p>
+      <p begin="00:00:13.334" end="00:00:15.510">so, we'll define a matrix here.</p>
+      <p begin="00:00:15.510" end="00:00:17.600">And a matrix, like this,</p>
+      <p begin="00:00:17.600" end="00:00:20.438">is just a list containing other lists.</p>
+      <p begin="00:00:20.438" end="00:00:21.633">So you can have...</p>
+      <p begin="00:00:21.633" end="00:00:22.998">It's basically rows and columns,</p>
+      <p begin="00:00:22.998" end="00:00:24.150">but it's really just</p>
+      <p begin="00:00:24.150" end="00:00:25.260">one list with other lists</p>
+      <p begin="00:00:25.260" end="00:00:26.945">that then actually contain the numbers.</p>
+      <p begin="00:00:26.945" end="00:00:28.694">Now, say you want to flatten this matrix</p>
+      <p begin="00:00:28.694" end="00:00:30.657">into a list of all of the cells</p>
+      <p begin="00:00:30.657" end="00:00:32.598">without the interior lists.</p>
+      <p begin="00:00:32.598" end="00:00:34.262">You can do that with</p>
+      <p begin="00:00:34.262" end="00:00:36.075">a list comprehension that has two</p>
+      <p begin="00:00:36.075" end="00:00:37.611">for expressions.</p>
+      <p begin="00:00:37.611" end="00:00:39.425">So, the flat version would be,</p>
+      <p begin="00:00:39.425" end="00:00:41.281">take each cell value</p>
+      <p begin="00:00:41.281" end="00:00:43.606">for each row in the matrix,</p>
+      <p begin="00:00:43.606" end="00:00:44.715">and then</p>
+      <p begin="00:00:44.715" end="00:00:46.635">take each value from</p>
+      <p begin="00:00:46.635" end="00:00:48.491">each row.</p>
+      <p begin="00:00:48.491" end="00:00:50.113">And if you print out the<br/>flat version of this,</p>
+      <p begin="00:00:50.113" end="00:00:51.307">you'll see</p>
+      <p begin="00:00:51.307" end="00:00:53.227">all the values from the matrix above</p>
+      <p begin="00:00:53.227" end="00:00:54.699">but with none of the</p>
+      <p begin="00:00:54.699" end="00:00:57.451">containing lists within the list.</p>
+      <p begin="00:00:57.451" end="00:00:58.646">This example is simple,</p>
+      <p begin="00:00:58.646" end="00:00:59.862">it's readable,</p>
+      <p begin="00:00:59.862" end="00:01:01.579">and it's a reasonable<br/>usage of multiple loops</p>
+      <p begin="00:01:01.579" end="00:01:04.139">within a single list comprehension.</p>
+      <p begin="00:01:04.139" end="00:01:06.422">When you look at this line of flattening,</p>
+      <p begin="00:01:06.422" end="00:01:07.766">it's very clear.</p>
+      <p begin="00:01:07.766" end="00:01:08.790">You can read left to right.</p>
+      <p begin="00:01:08.790" end="00:01:10.689">You understand exactly what's happening.</p>
+      <p begin="00:01:10.689" end="00:01:12.694">Another reasonable usage of multiple loops</p>
+      <p begin="00:01:12.694" end="00:01:14.230">is replicating the two level deep layout</p>
+      <p begin="00:01:14.230" end="00:01:15.894">of an input list.</p>
+      <p begin="00:01:15.894" end="00:01:18.347">So, let's say that we<br/>wanted to square each value</p>
+      <p begin="00:01:18.347" end="00:01:19.328">in each cell,</p>
+      <p begin="00:01:19.328" end="00:01:21.270">but maintain the same structure.</p>
+      <p begin="00:01:21.270" end="00:01:22.848">We could right a list comprehension</p>
+      <p begin="00:01:22.848" end="00:01:25.792">that actually generates<br/>two levels of lists.</p>
+      <p begin="00:01:25.792" end="00:01:29.200">So the first one actually<br/>creates a square,</p>
+      <p begin="00:01:29.398" end="00:01:31.211">and then, the second one</p>
+      <p begin="00:01:31.211" end="00:01:34.255">goes through the input matrix.</p>
+      <p begin="00:01:35.392" end="00:01:38.272">And the output of this</p>
+      <p begin="00:01:38.272" end="00:01:40.997">is</p>
+      <p begin="00:01:42.091" end="00:01:45.205">the same structure as the matrix input,</p>
+      <p begin="00:01:45.205" end="00:01:47.275">but it's had each row</p>
+      <p begin="00:01:47.275" end="00:01:49.003">interior list re-written</p>
+      <p begin="00:01:49.003" end="00:01:50.432">to square the values</p>
+      <p begin="00:01:50.432" end="00:01:51.797">in each position.</p>
+      <p begin="00:01:51.797" end="00:01:53.376">So, this expression's a little noisier</p>
+      <p begin="00:01:53.376" end="00:01:54.613">because of the extra</p>
+      <p begin="00:01:54.613" end="00:01:56.469">bracket characters in this interior</p>
+      <p begin="00:01:56.469" end="00:01:57.877">list comprehension,</p>
+      <p begin="00:01:57.877" end="00:01:59.498">but it's still pretty easy to read.</p>
+      <p begin="00:01:59.498" end="00:02:01.077">You can understand from left<br/>to right what's going on.</p>
+      <p begin="00:02:01.077" end="00:02:02.613">And this is a fine use of</p>
+      <p begin="00:02:02.613" end="00:02:05.871">multiple expressions in<br/>a list comprehension.</p>
+      <p begin="00:02:05.962" end="00:02:07.392">If this same expression included another</p>
+      <p begin="00:02:07.392" end="00:02:08.693">loop,</p>
+      <p begin="00:02:08.693" end="00:02:10.421">then the list comprehension gets so long,</p>
+      <p begin="00:02:10.421" end="00:02:11.936">it'd be really hard to understand.</p>
+      <p begin="00:02:11.936" end="00:02:15.093">So, let's say we had a<br/>three-dimensional matrix</p>
+      <p begin="00:02:15.093" end="00:02:16.309">with</p>
+      <p begin="00:02:16.309" end="00:02:17.418">multiple levels here.</p>
+      <p begin="00:02:17.418" end="00:02:18.634">So, just going to</p>
+      <p begin="00:02:18.634" end="00:02:19.978">try to clarify</p>
+      <p begin="00:02:19.978" end="00:02:21.514">how many levels we have</p>
+      <p begin="00:02:21.514" end="00:02:24.074">by showing you with indentation.</p>
+      <p begin="00:02:24.074" end="00:02:25.781">So, we have an interior list.</p>
+      <p begin="00:02:25.781" end="00:02:27.509">So we have a first dimension of lists,</p>
+      <p begin="00:02:27.509" end="00:02:29.173">but then interior lists there,</p>
+      <p begin="00:02:29.173" end="00:02:31.306">within items in that interior list.</p>
+      <p begin="00:02:31.306" end="00:02:33.034">Then we actually have<br/>the numbers inside that.</p>
+      <p begin="00:02:33.034" end="00:02:35.210">So it's the outer list,<br/>the first dimension,</p>
+      <p begin="00:02:35.210" end="00:02:36.469">then this is the second dimension,</p>
+      <p begin="00:02:36.469" end="00:02:37.812">then this is the third dimension.</p>
+      <p begin="00:02:37.812" end="00:02:39.391">And so, now we have a second,</p>
+      <p begin="00:02:39.391" end="00:02:41.162">let's say, level of this</p>
+      <p begin="00:02:41.162" end="00:02:43.658">with more numbers</p>
+      <p begin="00:02:43.658" end="00:02:46.596">and</p>
+      <p begin="00:02:46.730" end="00:02:47.327">there we go.</p>
+      <p begin="00:02:47.327" end="00:02:49.375">So, now we've got this<br/>three-dimensional matrix.</p>
+      <p begin="00:02:49.375" end="00:02:52.063">And let's say that you<br/>wanted to flatten this.</p>
+      <p begin="00:02:52.063" end="00:02:54.388">So, to flatten this with<br/>a list comprehension,</p>
+      <p begin="00:02:54.388" end="00:02:55.882">you could say, okay, I want to go</p>
+      <p begin="00:02:55.882" end="00:02:57.823">each item for</p>
+      <p begin="00:02:57.823" end="00:02:59.167">sublist1 in</p>
+      <p begin="00:02:59.167" end="00:03:02.089">the matrix,</p>
+      <p begin="00:03:02.089" end="00:03:02.985">and then you can keep going.</p>
+      <p begin="00:03:02.985" end="00:03:06.740">You could say for sublist two in sublist1.</p>
+      <p begin="00:03:06.740" end="00:03:09.535">And then for x in sublist2.</p>
+      <p begin="00:03:09.535" end="00:03:11.199">And if you print this out,</p>
+      <p begin="00:03:11.199" end="00:03:12.735">you'll see that we've</p>
+      <p begin="00:03:12.735" end="00:03:14.269">indeed flattened the list</p>
+      <p begin="00:03:14.269" end="00:03:15.615">in the order found</p>
+      <p begin="00:03:15.615" end="00:03:17.513">in the multidimensional matrix.</p>
+      <p begin="00:03:17.513" end="00:03:20.116">At this point, the<br/>multi-line comprehension</p>
+      <p begin="00:03:20.116" end="00:03:22.121">isn't much shorter than the alternative</p>
+      <p begin="00:03:22.121" end="00:03:24.724">of just normal python statements.</p>
+      <p begin="00:03:24.724" end="00:03:26.473">So, let's say we translated this</p>
+      <p begin="00:03:26.473" end="00:03:28.606">into an actual python expression.</p>
+      <p begin="00:03:28.606" end="00:03:30.889">So, I'm going to rewrite this</p>
+      <p begin="00:03:30.889" end="00:03:32.233">and leave that there.</p>
+      <p begin="00:03:32.233" end="00:03:35.070">So, let's say we had a flat list.</p>
+      <p begin="00:03:35.070" end="00:03:38.505">We loop for each cell list.</p>
+      <p begin="00:03:38.505" end="00:03:42.104">Then, we have a second loop,</p>
+      <p begin="00:03:43.006" end="00:03:45.011">and then we have</p>
+      <p begin="00:03:45.011" end="00:03:46.825">a way to extend the results of flat</p>
+      <p begin="00:03:46.825" end="00:03:49.705">which is using sublist2.</p>
+      <p begin="00:03:49.705" end="00:03:51.369">So, delete the old one,</p>
+      <p begin="00:03:51.369" end="00:03:52.563">run this again.</p>
+      <p begin="00:03:52.563" end="00:03:53.822">Same outcome.</p>
+      <p begin="00:03:53.822" end="00:03:55.763">This is actually read this way</p>
+      <p begin="00:03:55.763" end="00:03:58.430">than the list comprehension version.</p>
+      <p begin="00:03:58.430" end="00:03:59.902">Same number of lines,</p>
+      <p begin="00:03:59.902" end="00:04:01.630">or maybe one extra line,</p>
+      <p begin="00:04:01.630" end="00:04:03.763">but much clearer than</p>
+      <p begin="00:04:03.763" end="00:04:05.514">the many levels of looping</p>
+      <p begin="00:04:05.514" end="00:04:07.812">in a list comprehension.</p>
+      <p begin="00:04:08.074" end="00:04:09.482">List comprehensions also support</p>
+      <p begin="00:04:09.482" end="00:04:11.743">multiple if conditions.</p>
+      <p begin="00:04:11.743" end="00:04:13.876">And multiple conditions<br/>of the same loop level</p>
+      <p begin="00:04:13.876" end="00:04:16.031">are complicit and expressions.</p>
+      <p begin="00:04:16.031" end="00:04:17.545">So, let's say you have<br/>this list of numbers</p>
+      <p begin="00:04:17.545" end="00:04:19.359">and you want to filter it to list,</p>
+      <p begin="00:04:19.359" end="00:04:21.684">to numbers that are greater than four</p>
+      <p begin="00:04:21.684" end="00:04:23.071">and also even.</p>
+      <p begin="00:04:23.071" end="00:04:24.479">So I can say,</p>
+      <p begin="00:04:24.479" end="00:04:26.143">take each item</p>
+      <p begin="00:04:26.143" end="00:04:27.636">and the input list</p>
+      <p begin="00:04:27.636" end="00:04:30.367">and then let's only keep it<br/>if it's greater than four,</p>
+      <p begin="00:04:30.367" end="00:04:31.711">if it...</p>
+      <p begin="00:04:31.711" end="00:04:34.420">x is divisible by two.</p>
+      <p begin="00:04:34.420" end="00:04:35.999">You print out b.</p>
+      <p begin="00:04:35.999" end="00:04:38.302">What b would be.</p>
+      <p begin="00:04:38.302" end="00:04:39.668">For x...</p>
+      <p begin="00:04:39.668" end="00:04:40.862">There we go.</p>
+      <p begin="00:04:40.862" end="00:04:43.422">So now, here's greater than<br/>four, divisible by two.</p>
+      <p begin="00:04:43.422" end="00:04:44.958">You can write this again</p>
+      <p begin="00:04:44.958" end="00:04:46.217">the same way.</p>
+      <p begin="00:04:46.217" end="00:04:47.646">So just take it, modify it,</p>
+      <p begin="00:04:47.646" end="00:04:49.076">version c here.</p>
+      <p begin="00:04:49.076" end="00:04:51.124">And instead of having an and here,</p>
+      <p begin="00:04:51.124" end="00:04:53.044">you could actually just write if.</p>
+      <p begin="00:04:53.044" end="00:04:54.485">And these expressions will be</p>
+      <p begin="00:04:54.485" end="00:04:55.743">applied left to right.</p>
+      <p begin="00:04:55.743" end="00:04:56.853">And together.</p>
+      <p begin="00:04:56.853" end="00:04:58.709">So the output is exactly the same.</p>
+      <p begin="00:04:58.709" end="00:05:02.031">You can test that with another assertion.</p>
+      <p begin="00:05:03.295" end="00:05:05.770">And it passes.</p>
+      <p begin="00:05:05.770" end="00:05:07.114">Conditions can also be specified at each</p>
+      <p begin="00:05:07.114" end="00:05:08.500">level of looping</p>
+      <p begin="00:05:08.500" end="00:05:11.338">after the for expression<br/>in a list comprehension.</p>
+      <p begin="00:05:11.338" end="00:05:12.639">So let's say we had this</p>
+      <p begin="00:05:12.639" end="00:05:14.132">matrix from before,</p>
+      <p begin="00:05:14.132" end="00:05:15.476">and you want to filter the matrix</p>
+      <p begin="00:05:15.476" end="00:05:16.906">so only the cells,</p>
+      <p begin="00:05:16.906" end="00:05:18.122">the only cells remaining are the ones</p>
+      <p begin="00:05:18.122" end="00:05:19.743">divisible by three,</p>
+      <p begin="00:05:19.743" end="00:05:22.538">but only in rows that sum to 10 or higher.</p>
+      <p begin="00:05:22.538" end="00:05:24.116">So that's kind of confusing</p>
+      <p begin="00:05:24.116" end="00:05:24.756">idea,</p>
+      <p begin="00:05:24.756" end="00:05:26.653">but you can imagine some</p>
+      <p begin="00:05:26.653" end="00:05:27.913">mathematical situations.</p>
+      <p begin="00:05:27.913" end="00:05:29.588">You're trying to filter through<br/>some large amount of data</p>
+      <p begin="00:05:29.588" end="00:05:32.063">to find just the most important columns</p>
+      <p begin="00:05:32.063" end="00:05:33.322">or something like that.</p>
+      <p begin="00:05:33.322" end="00:05:34.666">So, here's my matrix.</p>
+      <p begin="00:05:34.666" end="00:05:35.690">And I'm going to filter through it.</p>
+      <p begin="00:05:35.690" end="00:05:36.650">I'm going to say I want</p>
+      <p begin="00:05:36.650" end="00:05:37.674">each cell</p>
+      <p begin="00:05:37.674" end="00:05:39.167">for x in each row</p>
+      <p begin="00:05:39.167" end="00:05:40.468">if the</p>
+      <p begin="00:05:40.468" end="00:05:42.281">number divisible by three</p>
+      <p begin="00:05:42.281" end="00:05:43.583">and then I can say</p>
+      <p begin="00:05:43.583" end="00:05:45.204">I only want...</p>
+      <p begin="00:05:45.204" end="00:05:47.892">And then I go through<br/>each row in the matrix</p>
+      <p begin="00:05:47.892" end="00:05:48.916">and then</p>
+      <p begin="00:05:48.916" end="00:05:52.159">only include this item in the output list</p>
+      <p begin="00:05:52.159" end="00:05:53.737">if the sum of the whole row</p>
+      <p begin="00:05:53.737" end="00:05:56.489">is greater than or equal to 10.</p>
+      <p begin="00:05:56.489" end="00:05:58.388">And so now, if I print out filtered,</p>
+      <p begin="00:05:58.388" end="00:05:59.775">you'll see that</p>
+      <p begin="00:05:59.775" end="00:06:01.310">the only rows that this actually happens</p>
+      <p begin="00:06:01.310" end="00:06:03.124">is the middle row</p>
+      <p begin="00:06:03.124" end="00:06:04.425">with the number six in it</p>
+      <p begin="00:06:04.425" end="00:06:05.769">and the last row with the number nine.</p>
+      <p begin="00:06:05.769" end="00:06:07.668">The first row adds up to</p>
+      <p begin="00:06:07.668" end="00:06:09.588">these numbers only add up to six,</p>
+      <p begin="00:06:09.588" end="00:06:11.294">so that one's removed by</p>
+      <p begin="00:06:11.294" end="00:06:13.300">this expression down at the bottom.</p>
+      <p begin="00:06:13.300" end="00:06:15.006">The middle row sums up to 10,</p>
+      <p begin="00:06:15.006" end="00:06:16.457">so it passes this expression</p>
+      <p begin="00:06:16.457" end="00:06:18.270">then it evaluates the</p>
+      <p begin="00:06:18.270" end="00:06:20.445">value for that position,</p>
+      <p begin="00:06:20.445" end="00:06:21.897">then it goes through each item</p>
+      <p begin="00:06:21.897" end="00:06:24.031">in that interior list for five and six,</p>
+      <p begin="00:06:24.031" end="00:06:25.482">and it finds that six</p>
+      <p begin="00:06:25.482" end="00:06:27.103">is the only one that's divisible by three.</p>
+      <p begin="00:06:27.103" end="00:06:28.490">So it then includes that cell.</p>
+      <p begin="00:06:28.490" end="00:06:29.599">Then, we go back down here,</p>
+      <p begin="00:06:29.599" end="00:06:31.370">we sum up seven, eight, and nine,</p>
+      <p begin="00:06:31.370" end="00:06:32.757">that's greater than 10.</p>
+      <p begin="00:06:32.757" end="00:06:33.823">So then we go</p>
+      <p begin="00:06:33.823" end="00:06:35.551">back through this list of cells</p>
+      <p begin="00:06:35.551" end="00:06:37.279">and find that seven and eight</p>
+      <p begin="00:06:37.279" end="00:06:38.623">are not divisible by three,</p>
+      <p begin="00:06:38.623" end="00:06:40.010">and so then, nine if preserved</p>
+      <p begin="00:06:40.010" end="00:06:41.503">and that's how we get this final output</p>
+      <p begin="00:06:41.503" end="00:06:42.570">of</p>
+      <p begin="00:06:42.570" end="00:06:43.679">six and nine.</p>
+      <p begin="00:06:43.679" end="00:06:45.023">I realize this example is a bit convoluted</p>
+      <p begin="00:06:45.023" end="00:06:46.367">when you look at it,</p>
+      <p begin="00:06:46.367" end="00:06:47.540">but in practice, you'll find</p>
+      <p begin="00:06:47.540" end="00:06:48.895">plenty of opportunities when</p>
+      <p begin="00:06:48.895" end="00:06:50.090">you want to use a list comprehension</p>
+      <p begin="00:06:50.090" end="00:06:51.434">that looks just like this</p>
+      <p begin="00:06:51.434" end="00:06:52.735">for other conditions</p>
+      <p begin="00:06:52.735" end="00:06:54.463">besides these mathematical properties</p>
+      <p begin="00:06:54.463" end="00:06:56.447">and it'll seem like it's a good fit.</p>
+      <p begin="00:06:56.447" end="00:06:58.026">But I strongly encourage you</p>
+      <p begin="00:06:58.026" end="00:07:00.543">to avoid list comprehensions<br/>that look like this.</p>
+      <p begin="00:07:00.543" end="00:07:01.887">It's just really hard to understand</p>
+      <p begin="00:07:01.887" end="00:07:02.911">what's happening.</p>
+      <p begin="00:07:02.911" end="00:07:04.916">Yeah, sure, you've saved<br/>a few lines of code,</p>
+      <p begin="00:07:04.916" end="00:07:07.178">made it really compact.</p>
+      <p begin="00:07:07.178" end="00:07:08.522">It doesn't outweigh</p>
+      <p begin="00:07:08.522" end="00:07:09.813">the cost of the difficulties</p>
+      <p begin="00:07:09.813" end="00:07:10.752">that might come later.</p>
+      <p begin="00:07:10.752" end="00:07:11.619">It's, for new readers of the code,</p>
+      <p begin="00:07:11.619" end="00:07:13.389">this just doesn't make any sense</p>
+      <p begin="00:07:13.389" end="00:07:15.843">and it's not approachable.</p>
+      <p begin="00:07:15.843" end="00:07:17.251">So, the rule of thumb is to</p>
+      <p begin="00:07:17.251" end="00:07:18.595">avoid using more than two</p>
+      <p begin="00:07:18.595" end="00:07:20.024">complex expressions</p>
+      <p begin="00:07:20.024" end="00:07:21.240">in a list comprehension.</p>
+      <p begin="00:07:21.240" end="00:07:22.498">Let's say that we had</p>
+      <p begin="00:07:22.498" end="00:07:24.077">a list of 100 numbers here.</p>
+      <p begin="00:07:24.077" end="00:07:25.933">One good example is having a simple loop</p>
+      <p begin="00:07:25.933" end="00:07:27.320">and two conditions.</p>
+      <p begin="00:07:27.320" end="00:07:28.621">So, let's say that we wanted to</p>
+      <p begin="00:07:28.621" end="00:07:30.754">pull out every number from this list</p>
+      <p begin="00:07:30.754" end="00:07:33.037">that's divisible by two and three.</p>
+      <p begin="00:07:33.037" end="00:07:35.298">So, for x and a,</p>
+      <p begin="00:07:35.298" end="00:07:38.136">if the number's divisible by two,</p>
+      <p begin="00:07:38.136" end="00:07:40.610">and if the number's divisible by three,</p>
+      <p begin="00:07:40.610" end="00:07:43.255">then we're good.</p>
+      <p begin="00:07:43.255" end="00:07:43.981">Now, it's</p>
+      <p begin="00:07:43.981" end="00:07:45.154">pretty easy to read.</p>
+      <p begin="00:07:45.154" end="00:07:46.647">We've got two expressions</p>
+      <p begin="00:07:46.647" end="00:07:48.738">that are kind of complex.</p>
+      <p begin="00:07:48.738" end="00:07:50.402">But then this little x,</p>
+      <p begin="00:07:50.402" end="00:07:51.277">four x and a.</p>
+      <p begin="00:07:51.277" end="00:07:52.578">That's really simple, very obvious.</p>
+      <p begin="00:07:52.578" end="00:07:54.199">There's no actual expression<br/>here on the value.</p>
+      <p begin="00:07:54.199" end="00:07:56.055">We're just taking it straight through.</p>
+      <p begin="00:07:56.055" end="00:07:57.549">So this a good example</p>
+      <p begin="00:07:57.549" end="00:07:59.042">of a simple loop,</p>
+      <p begin="00:07:59.042" end="00:08:01.879">and then two conditions.</p>
+      <p begin="00:08:01.879" end="00:08:03.117">Another type of comprehension</p>
+      <p begin="00:08:03.117" end="00:08:04.098">that I think is fine</p>
+      <p begin="00:08:04.098" end="00:08:05.484">is two levels of looping</p>
+      <p begin="00:08:05.484" end="00:08:07.020">and then a complex expression.</p>
+      <p begin="00:08:07.020" end="00:08:08.194">So,</p>
+      <p begin="00:08:08.194" end="00:08:10.178">if you had that matrix from before,</p>
+      <p begin="00:08:10.178" end="00:08:12.823">with multiple levels of</p>
+      <p begin="00:08:12.823" end="00:08:14.444">rows in it.</p>
+      <p begin="00:08:14.444" end="00:08:15.340">And wanted to go through this</p>
+      <p begin="00:08:15.340" end="00:08:16.407">and do the squaring</p>
+      <p begin="00:08:16.407" end="00:08:17.388">as before,</p>
+      <p begin="00:08:17.388" end="00:08:19.330">and let's say, flatten it also...</p>
+      <p begin="00:08:19.330" end="00:08:21.058">Row in a for</p>
+      <p begin="00:08:21.058" end="00:08:24.358">x in row...</p>
+      <p begin="00:08:24.535" end="00:08:26.241">So, this one is another example.</p>
+      <p begin="00:08:26.241" end="00:08:28.673">We have two loops</p>
+      <p begin="00:08:28.673" end="00:08:30.188">inside of each other,</p>
+      <p begin="00:08:30.188" end="00:08:31.596">and then we have one</p>
+      <p begin="00:08:31.596" end="00:08:33.495">complicated expression.</p>
+      <p begin="00:08:33.495" end="00:08:34.881">And so, I think that</p>
+      <p begin="00:08:34.881" end="00:08:36.289">this is, again, following that</p>
+      <p begin="00:08:36.289" end="00:08:38.892">two expressions rule of thumb.</p>
+      <p begin="00:08:38.892" end="00:08:40.044">You really don't want to get</p>
+      <p begin="00:08:40.044" end="00:08:41.473">more complicated than</p>
+      <p begin="00:08:41.473" end="00:08:42.647">two levels of looping</p>
+      <p begin="00:08:42.647" end="00:08:45.015">and then an expression.</p>
+      <p begin="00:08:45.015" end="00:08:46.593">And finally, the last variation</p>
+      <p begin="00:08:46.593" end="00:08:47.788">that I think is fine</p>
+      <p begin="00:08:47.788" end="00:08:50.177">if you have another<br/>flat list like this one</p>
+      <p begin="00:08:50.177" end="00:08:52.950">and you want to say</p>
+      <p begin="00:08:52.950" end="00:08:54.444">one condition in one loop.</p>
+      <p begin="00:08:54.444" end="00:08:56.022">One complicated condition</p>
+      <p begin="00:08:56.022" end="00:08:57.324">and one complicated</p>
+      <p begin="00:08:57.324" end="00:08:58.945">loop expression.</p>
+      <p begin="00:08:58.945" end="00:09:00.566">So here's my complicated expression</p>
+      <p begin="00:09:00.566" end="00:09:02.700">and then I have a simple loop,</p>
+      <p begin="00:09:02.700" end="00:09:04.705">and then a simple expression.</p>
+      <p begin="00:09:04.705" end="00:09:06.646">Let's say to only pull out</p>
+      <p begin="00:09:06.646" end="00:09:08.566">the even numbers,</p>
+      <p begin="00:09:08.566" end="00:09:10.977">the even squares from this list.</p>
+      <p begin="00:09:10.977" end="00:09:12.321">I think that's fine.</p>
+      <p begin="00:09:12.321" end="00:09:14.497">So, this is kind of a<br/>complicated expression.</p>
+      <p begin="00:09:14.497" end="00:09:15.990">This is a simple expression.</p>
+      <p begin="00:09:15.990" end="00:09:17.889">This is a complicated expression.</p>
+      <p begin="00:09:17.889" end="00:09:18.763">So that's the, again,</p>
+      <p begin="00:09:18.763" end="00:09:20.065">rule of thumb.</p>
+      <p begin="00:09:20.065" end="00:09:21.281">Two complicated expressions</p>
+      <p begin="00:09:21.281" end="00:09:23.371">and one simple loop is also fine.</p>
+      <p begin="00:09:23.371" end="00:09:24.950">So, just to show you one more time,</p>
+      <p begin="00:09:24.950" end="00:09:27.083">these are the examples that I think are</p>
+      <p begin="00:09:27.083" end="00:09:28.939">reasonable usages of list comprehensions</p>
+      <p begin="00:09:28.939" end="00:09:30.198">following rule of thumb of</p>
+      <p begin="00:09:30.198" end="00:09:32.054">no more than two expressions.</p>
+      <p begin="00:09:32.054" end="00:09:33.270">The first one has</p>
+      <p begin="00:09:33.270" end="00:09:34.464">a simple loop and then two</p>
+      <p begin="00:09:34.464" end="00:09:36.363">complicated conditions.</p>
+      <p begin="00:09:36.363" end="00:09:38.646">The middle one has a<br/>complicated expression</p>
+      <p begin="00:09:38.646" end="00:09:39.584">and then</p>
+      <p begin="00:09:39.584" end="00:09:40.544">right here,</p>
+      <p begin="00:09:40.544" end="00:09:41.334">a simple loop</p>
+      <p begin="00:09:41.334" end="00:09:42.784">and then another complicated condition.</p>
+      <p begin="00:09:42.784" end="00:09:44.726">And then this botton one has</p>
+      <p begin="00:09:44.726" end="00:09:47.008">a complicated expression</p>
+      <p begin="00:09:47.008" end="00:09:49.184">and then two levels of looping.</p>
+      <p begin="00:09:49.184" end="00:09:50.357">So, I think</p>
+      <p begin="00:09:50.357" end="00:09:51.828">these are good usages,</p>
+      <p begin="00:09:51.828" end="00:09:53.408">but anything more complicated than that,</p>
+      <p begin="00:09:53.408" end="00:09:54.667">you're better off just using</p>
+      <p begin="00:09:54.667" end="00:09:56.203">if statements, for statements,</p>
+      <p begin="00:09:56.203" end="00:09:58.613">maybe writing a helper function</p>
+      <p begin="00:09:58.613" end="00:10:00.314">and avoiding a list comprehension.</p>
+    </div>
+  </body>
+</tt>

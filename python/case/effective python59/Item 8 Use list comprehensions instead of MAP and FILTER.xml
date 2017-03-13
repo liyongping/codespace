@@ -1,0 +1,122 @@
+<tt xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
+  <head>
+    <styling>
+      <style xml:id="basic" tts:textAlign="center"/>
+    </styling>
+    <ttm:metadata>
+      <ttm:title>9780134175249-EPLL_02_01.dfxp</ttm:title>
+    </ttm:metadata>
+  </head>
+  <body style="basic">
+    <div>
+      <p begin="00:00:06.639" end="00:00:08.359">- [Voiceover] Python<br/>provides compact syntax</p>
+      <p begin="00:00:08.359" end="00:00:10.229">for deriving one list from another.</p>
+      <p begin="00:00:10.229" end="00:00:12.209">These expressions are<br/>called list comprehensions.</p>
+      <p begin="00:00:12.209" end="00:00:14.269">For example, say you<br/>had a list of numbers,</p>
+      <p begin="00:00:14.269" end="00:00:15.839">and you want to do a computation on them,</p>
+      <p begin="00:00:15.839" end="00:00:18.549">like compute the square of<br/>every number in the list.</p>
+      <p begin="00:00:18.549" end="00:00:20.519">So do that with a list comprehension,</p>
+      <p begin="00:00:20.519" end="00:00:23.549">you say 'Here's the<br/>expression I want to do,'</p>
+      <p begin="00:00:23.549" end="00:00:26.849">and then say the list that<br/>you want to iterate over.</p>
+      <p begin="00:00:29.079" end="00:00:30.479">And there you go.</p>
+      <p begin="00:00:30.479" end="00:00:32.909">Unless you're applying a<br/>single argument function,</p>
+      <p begin="00:00:32.909" end="00:00:34.729">list comprehensions like this are clearer</p>
+      <p begin="00:00:34.729" end="00:00:36.249">than the map built-in function.</p>
+      <p begin="00:00:36.249" end="00:00:37.879">So if we were to rewrite this with</p>
+      <p begin="00:00:37.879" end="00:00:41.849">the map built-in function,<br/>we would instead do,</p>
+      <p begin="00:00:41.849" end="00:00:43.849">we'd create a lambda in here,</p>
+      <p begin="00:00:47.079" end="00:00:48.329">and that would be the same result.</p>
+      <p begin="00:00:48.329" end="00:00:50.519">Oh and then we'd have to</p>
+      <p begin="00:00:50.519" end="00:00:52.929">turn it into a list<br/>because it's a generator.</p>
+      <p begin="00:00:52.929" end="00:00:54.649">There it is. Same result.</p>
+      <p begin="00:00:54.649" end="00:00:56.629">What you'll notice though<br/>is that this lambda</p>
+      <p begin="00:00:56.629" end="00:01:00.159">is much noisier than the<br/>simple list comprehension.</p>
+      <p begin="00:01:00.159" end="00:01:02.099">So for the same outcome<br/>it's much easier to read</p>
+      <p begin="00:01:02.099" end="00:01:05.599">this first version than<br/>the map built-in function.</p>
+      <p begin="00:01:05.599" end="00:01:07.859">Another benefit of using<br/>list comprehensions</p>
+      <p begin="00:01:07.859" end="00:01:09.909">instead of map is that list comprehensions</p>
+      <p begin="00:01:09.909" end="00:01:12.689">let you easily filter<br/>items out of the input list</p>
+      <p begin="00:01:12.689" end="00:01:14.569">so they don't show up in the output list.</p>
+      <p begin="00:01:14.569" end="00:01:16.579">So let's go back to this example</p>
+      <p begin="00:01:16.579" end="00:01:18.370">with just the list<br/>comprehension from before.</p>
+      <p begin="00:01:18.370" end="00:01:20.249">And let's say you only<br/>want to compute the squares</p>
+      <p begin="00:01:20.249" end="00:01:22.229">of numbers that are divisible by two.</p>
+      <p begin="00:01:22.229" end="00:01:24.199">So to do this, all I need to do is modify</p>
+      <p begin="00:01:24.199" end="00:01:27.129">this expression to add a condition here</p>
+      <p begin="00:01:27.129" end="00:01:30.659">where I check to see<br/>that x is divisible by 2.</p>
+      <p begin="00:01:30.659" end="00:01:33.779">And if I run this again now<br/>I get all of the squares</p>
+      <p begin="00:01:33.779" end="00:01:36.149">of the even numbers from the list.</p>
+      <p begin="00:01:36.149" end="00:01:38.409">The filter built-in function can be used</p>
+      <p begin="00:01:38.409" end="00:01:40.369">along with map to<br/>achieve the same outcome,</p>
+      <p begin="00:01:40.369" end="00:01:41.909">but it's much harder to read.</p>
+      <p begin="00:01:41.909" end="00:01:44.769">So if I want to rewrite<br/>this using map and filter,</p>
+      <p begin="00:01:44.769" end="00:01:47.249">it says the alternative approach,</p>
+      <p begin="00:01:47.249" end="00:01:50.649">first I have say that I'm<br/>mapping over each item,</p>
+      <p begin="00:01:50.649" end="00:01:53.329">and the goal is to square each item.</p>
+      <p begin="00:01:53.329" end="00:01:55.640">And then what I'm<br/>mapping over is what I've</p>
+      <p begin="00:01:55.640" end="00:01:57.589">already filtered through,</p>
+      <p begin="00:01:57.589" end="00:01:58.989">and then I have to define</p>
+      <p begin="00:01:58.989" end="00:02:01.209">another lambda function for that,</p>
+      <p begin="00:02:01.209" end="00:02:04.469">which actually does the<br/>expression and returns true</p>
+      <p begin="00:02:04.469" end="00:02:08.259">in the case that the<br/>item is even, and then</p>
+      <p begin="00:02:08.259" end="00:02:11.769">filter has to run over<br/>the input, which is "a",</p>
+      <p begin="00:02:11.769" end="00:02:13.849">so now here I can print out</p>
+      <p begin="00:02:13.849" end="00:02:16.049">the alternative version instead.</p>
+      <p begin="00:02:16.049" end="00:02:17.110">So there it is.</p>
+      <p begin="00:02:17.110" end="00:02:19.729">So same outcome, same<br/>result, but you can see,</p>
+      <p begin="00:02:19.729" end="00:02:22.629">just side-by-side, it's a lot more code.</p>
+      <p begin="00:02:22.629" end="00:02:24.879">It's harder to read, the<br/>extra lambdas in there</p>
+      <p begin="00:02:24.879" end="00:02:27.669">don't really make sense immediately.</p>
+      <p begin="00:02:27.669" end="00:02:29.459">And you might be able to rewrite this</p>
+      <p begin="00:02:29.459" end="00:02:33.229">if you said okay, here's my map func,</p>
+      <p begin="00:02:33.229" end="00:02:35.870">and took the lambda and moved that up,</p>
+      <p begin="00:02:35.870" end="00:02:38.269">and then your filter func,</p>
+      <p begin="00:02:38.269" end="00:02:42.019">and took this lambda and moved it up,</p>
+      <p begin="00:02:42.019" end="00:02:45.049">and then said, you know, map func,</p>
+      <p begin="00:02:45.049" end="00:02:46.889">filter func or something like this.</p>
+      <p begin="00:02:46.889" end="00:02:48.269">You get the same output with that as well,</p>
+      <p begin="00:02:48.269" end="00:02:49.409">But now you're onto three lines.</p>
+      <p begin="00:02:49.409" end="00:02:51.109">By the point you've gotten<br/>to three lines you might</p>
+      <p begin="00:02:51.109" end="00:02:53.129">as well just write a four loop<br/>with an if statement in it</p>
+      <p begin="00:02:53.129" end="00:02:54.409">and you really don't get any benefit</p>
+      <p begin="00:02:54.409" end="00:02:56.029">from using map and filter.</p>
+      <p begin="00:02:56.029" end="00:02:58.129">So the list comprehension's<br/>a much clearly way</p>
+      <p begin="00:02:58.129" end="00:03:00.659">to achieve the goal of<br/>both mapping and filtering</p>
+      <p begin="00:03:00.659" end="00:03:01.839">with short syntax.</p>
+      <p begin="00:03:02.959" end="00:03:04.500">Dictionaries and sets have their own</p>
+      <p begin="00:03:04.500" end="00:03:06.389">equivalents of list comprehensions.</p>
+      <p begin="00:03:06.389" end="00:03:08.219">And these make it easy to create</p>
+      <p begin="00:03:08.219" end="00:03:10.989">derived data structures when<br/>you're written algorithms.</p>
+      <p begin="00:03:10.989" end="00:03:14.149">So for example let's say that<br/>we had a list of chilies,</p>
+      <p begin="00:03:14.149" end="00:03:17.389">like chili peppers, and their heat,</p>
+      <p begin="00:03:17.389" end="00:03:19.669">like how hot they are when you eat them.</p>
+      <p begin="00:03:19.669" end="00:03:21.229">So we have Ghost peppers,<br/>which are the hottest,</p>
+      <p begin="00:03:21.229" end="00:03:23.739">Habaneros and then let's<br/>say cayenne peppers</p>
+      <p begin="00:03:23.739" end="00:03:25.849">as the third place.</p>
+      <p begin="00:03:25.849" end="00:03:28.709">Now we can use a dictionary<br/>comprehension to invert</p>
+      <p begin="00:03:28.709" end="00:03:31.559">this index so we map<br/>ranking, one, two, three,</p>
+      <p begin="00:03:31.559" end="00:03:33.609">to the name of the pepper.</p>
+      <p begin="00:03:33.609" end="00:03:37.219">So let's say rank dict equals the rank</p>
+      <p begin="00:03:37.219" end="00:03:40.689">mapped to the name, and<br/>then, the comprehension</p>
+      <p begin="00:03:40.689" end="00:03:45.689">part is for name rank in<br/>chili ranks dot items.</p>
+      <p begin="00:03:46.069" end="00:03:48.069">The items are going to<br/>be the key value pairs</p>
+      <p begin="00:03:48.069" end="00:03:50.259">out of the chili ranks dictionary,</p>
+      <p begin="00:03:50.259" end="00:03:52.089">we capture those out<br/>of the expression here,</p>
+      <p begin="00:03:52.089" end="00:03:56.389">and then we invert them for<br/>the actual new dictionary.</p>
+      <p begin="00:03:56.389" end="00:03:57.929">So now you can see that the new dictionary</p>
+      <p begin="00:03:57.929" end="00:04:00.739">will be the inverted version.</p>
+      <p begin="00:04:00.739" end="00:04:02.989">You can also do comprehensions with sets.</p>
+      <p begin="00:04:02.989" end="00:04:05.059">Imagine that you have the<br/>ranks of chilies again here,</p>
+      <p begin="00:04:05.059" end="00:04:06.579">and you want to find figure out the set</p>
+      <p begin="00:04:06.579" end="00:04:09.209">of all lengths of chili names.</p>
+      <p begin="00:04:09.209" end="00:04:13.159">So I can say chili length<br/>set is going to be,</p>
+      <p begin="00:04:13.159" end="00:04:15.569">and then I'm going to use<br/>the set literal of braces</p>
+      <p begin="00:04:15.569" end="00:04:18.009">to actually do the comprehension.</p>
+      <p begin="00:04:18.009" end="00:04:19.759">And then I'll say I'll take the length</p>
+      <p begin="00:04:19.759" end="00:04:22.069">of each name for the names</p>
+      <p begin="00:04:22.069" end="00:04:25.969">in the chili ranks keys.</p>
+      <p begin="00:04:30.939" end="00:04:32.879">There you go. So now I<br/>have a set of all length</p>
+      <p begin="00:04:32.879" end="00:04:35.379">of the chili names from<br/>this comprehension.</p>
+    </div>
+  </body>
+</tt>
