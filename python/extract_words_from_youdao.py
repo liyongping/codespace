@@ -64,7 +64,7 @@ if __name__ == '__main__':
         p1100 = (p+1)*100
         filename = "words_%d-%d.txt"%(p100,p1100)
         file = open(filename,'w+')
-        file.write(" ".join(words[p100:p1100]))
+        file.write("\n".join(words[p100:p1100]))
         file.close()
 
     part_number = len(sentences)/50
