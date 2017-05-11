@@ -6,9 +6,12 @@ Utility for word book of youdao
 
 import os, sys
 import urllib2
-import mp3play
 import time
+import argparse
 from xml.etree import ElementTree as ET
+from random import shuffle
+
+import mp3play
 
 def setup_proxy_for_urllib2(proxies=None):
     '''
@@ -61,16 +64,20 @@ def play_mp3(filename, max_seconds=5):
     time.sleep(min(max_seconds, clip.seconds()))
     clip.stop()
 
-def play_words(words=[], folder=None, dwell_time=1):
+def play_words(words=[], folder=None, interval=1, play_mode="order", replay_times=1):
     '''
     Play words list.
     '''
+    if play_mode == "random":
+        shuffle(words)
+
     for word in words:
         word_file_name = word+".mp3"
         if folder is not None:
             word_file_name = os.path.join(folder, word_file_name)
-        play_mp3(word_file_name)
-        time.sleep(dwell_time)
+        for _ in range(0,replay_times):
+            play_mp3(word_file_name)
+            time.sleep(interval)
 
 def extract_words_from_xml(xml_file_name):
     '''
@@ -86,15 +93,45 @@ def extract_words_from_xml(xml_file_name):
     words.sort()
     return words
 
+def parse_options():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-f', '--file', dest='workbook_name', type=file, required=True,
+                        help='The workbook xml file')
+
+    parser.add_argument('-m', '--mode', dest='mode', choices=['flush', 'play'], default='play',
+                        help='Flush: Download all words to be local\n\
+                                                      play : Play words\
+                        ')
+    parser.add_argument('-d', '--directory', dest='directory', default='wordbook',
+                        help='Flush words.mp3 into this directory')
+    parser.add_argument('-p', '--play', dest='play_mode', choices=['order', 'random'], default='order',
+                        help='Play mode\n\
+                              order : In order to play words\n\
+                              random: Play words randomly\
+                        ')
+    parser.add_argument('-r', '--replay', dest='replay_times', type=int, default=3,
+                        help='Replay times of every words')
+    parser.add_argument('-i', '--interval', dest='interval', type=int, default=3,
+                        help='The interval seconds of playing words')
+    parser.add_argument('--http_proxy', dest='http_proxy',
+                        help='Setup HTTP proxy')
+
+    args = parser.parse_args()
+
+    return args
+
 def main():
-    #setup_proxy_for_urllib2({'http': 'www.example.com:80'})
-    xml_file_name = os.path.join('wordbook', "words.xml")
+    args =  parse_options()
+    print args
+    if args.http_proxy is not None:
+        setup_proxy_for_urllib2({'http': args.http_proxy})
 
-    words = extract_words_from_xml(xml_file_name)
-
-    download_words(words, "wordbook")
-
-    play_words(words, "wordbook")
+    words = extract_words_from_xml(args.workbook_name)
+    print words
+    if args.mode == 'flush':
+        download_words(words, args.directory)
+    elif args.mode == 'play':
+        play_words(words, args.directory, args.interval, args.play_mode, args.replay_times)
 
 if __name__ == '__main__':
     main()
