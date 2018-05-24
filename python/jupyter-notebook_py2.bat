@@ -1,0 +1,1 @@
+"C:/Program Files/Anaconda2/python.exe" "C:/Program Files/Anaconda2/Scripts/jupyter-notebook-script.py"
