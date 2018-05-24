@@ -1,5 +1,9 @@
 import tensorflow as tf
 
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 
 X = tf.placeholder(tf.float64, name="X")
 Y = tf.placeholder(tf.float64, name="Y")
