@@ -26,8 +26,13 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+mu = mean(X) % mu: 2*1
+sigma = std(X) % sigma: 2*1
 
+% X_norm = bsxfun(@minus, X, mu);  % X.shape=(m,2) mu.shape=(1,2)
+% X_norm = bsxfun(@rdivide, X_norm, sigma); % X.shape=(m,2) sigma.shape=(1,2)
 
+X_norm = (X - mu)./sigma;
 
 
 
