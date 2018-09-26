@@ -13,8 +13,11 @@ figure; hold on;
 %
 
 
+po = find(y==1);
+neg = find(y==0);
 
-
+plot(X(po,1), X(po,2), "k+", 'LineWidth', 2, "markersize", 7);
+plot(X(neg,1), X(neg,2), "ko", "markeredgecolor", 'r' ,"markersize", 7);
 
 
 
