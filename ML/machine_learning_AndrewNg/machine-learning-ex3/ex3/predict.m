@@ -22,7 +22,18 @@ p = zeros(size(X, 1), 1);
 %
 
 
+X = [ones(m, 1) X];
 
+z2 = Theta1 * X';  % 25*401,  401*5000
+
+a2 = sigmoid(z2);  % 25*5000
+
+a2 = [ones(m,1) a2'];
+z3 = Theta2 * a2';  % 10*26, 26*5000
+
+h = sigmoid(z3); % 10*5000
+
+[max_num, p] = max(h', [], 2); 
 
 
 
