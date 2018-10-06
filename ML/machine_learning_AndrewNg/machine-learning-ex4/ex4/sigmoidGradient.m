@@ -16,10 +16,10 @@ g = zeros(size(z));
 
 
 
+s = 1./(power(e,-1*z) + 1);
 
 
-
-
+g = s.*(1-s);
 
 
 

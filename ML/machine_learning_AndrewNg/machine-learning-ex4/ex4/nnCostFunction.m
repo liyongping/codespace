@@ -63,22 +63,50 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 
+% one-hot Y
+Y = zeros(m, num_labels);  % 5000 * 10
+for i = 1:m
+    Y(i, y(i)) = 1;
+end
+
+X = [ones(m,1) X]; %  5000 * 401
+
+z2 = X * Theta1'; %  5000 * 25
+a2 = sigmoid(z2);
+
+a2 = [ones(m ,1) a2]; %  5000 * 26
+z3 = a2 * Theta2';
+y_pred = sigmoid(z3); % 5000 * 10
+
+
+J = 1/m * sum( sum(-1 * Y .* log(y_pred) - (1-Y) .* log(1-y_pred)) );
+
+% regularization
+J = J + lambda/(2*m) * (sum(sum(Theta1(:,2:end ).^2)) + sum(sum( Theta2(:,2:end).^2 )));
 
 
 
 
+% backward
+%1
+a3 = y_pred;
+delta3 = a3 - Y; % 5000 * 10
 
+%2
+%        25*10     5000 * 10   5000*25
+delta2 = (Theta2(:,2:end)' * delta3')' .* sigmoidGradient(z2); %5000 * 25
 
+%3
+a1 = X; %  5000 * 401
+D1 = delta2' * a1; % 25 * 401
 
+D2 = delta3' *a2; % 10 * 26
 
+Theta1(:,1) = 0;
+Theta2(:,1) = 0;
 
-
-
-
-
-
-
-
+Theta1_grad = D1/m + lambda/m * Theta1;
+Theta2_grad = D2/m + lambda/m * Theta2;
 
 % -------------------------------------------------------------
 
