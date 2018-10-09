@@ -21,9 +21,13 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+for xindex = 1: size(X,1)
 
-
-
+    [c, ck] = min(sum((centroids - X(xindex,:)).^2,2));
+    
+    idx(xindex) = ck;
+    
+endfor
 
 
 
