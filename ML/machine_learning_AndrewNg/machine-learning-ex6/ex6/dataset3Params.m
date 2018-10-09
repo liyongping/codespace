@@ -23,10 +23,35 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
+if 0 % comment out multiple lines
 
+    vv = [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30];
 
+    min_error = 1;
 
+    for ctmp = vv
+      
+      for stmp = vv
+        
+        model= svmTrain(X, y, ctmp, @(x1, x2) gaussianKernel(x1, x2, stmp)); 
+        predictions = svmPredict(model, Xval);
 
+        cur_error = mean(double(predictions ~= yval));
+        if min_error > cur_error,
+          min_error = cur_error;
+          C = ctmp;
+          sigma = stmp;
+        end
+        
+      end
+    end
+
+end 
+
+fprintf(['C = %f sigma = %f\n'], C, sigma);
+
+C = 1.000000;
+sigma = 0.100000;
 
 
 % =========================================================================
